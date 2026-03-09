@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://r0caupxdyhlg"]
+
+[ext_resource type="Script" uid="uid://d16gl0rcmtt5o" path="res://scenes/player.gd" id="1_g2els"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(120, 133)
+
+[node name="Player" type="CharacterBody2D" unique_id=1278691344]
+script = ExtResource("1_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=708228493]
+shape = SubResource("RectangleShape2D_g2els")
+
+[node name="Ampelmann" type="ColorRect" parent="." unique_id=1501415594]
+unique_name_in_owner = true
+offset_left = -60.000004
+offset_top = -67.0
+offset_right = 353.6364
+offset_bottom = 394.89392
+scale = Vector2(0.2901099, 0.29010993)
+color = Color(0.26061058, 1, 0.14840168, 1)
+
+[node name="Ampelmann_rot" type="ColorRect" parent="." unique_id=1534079572]
+unique_name_in_owner = true
+offset_left = -60.000004
+offset_top = -67.0
+offset_right = 353.63638
+offset_bottom = 394.8939
+scale = Vector2(0.2901099, 0.29010993)
+color = Color(1, 0.3547017, 0.14347064, 1)

@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://bg5tsici80b54"]
+
+[ext_resource type="Script" uid="uid://d1c1x410mju2t" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=1098373884]
+script = ExtResource("1_l6cm7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=333882924]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14585283, 0.21366757, 0.5287111, 0.8980392)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=178211008]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer" unique_id=1945211112]
+layout_mode = 2
+theme_override_constants/separation = 102
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=1858553712]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="VBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1956222386]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=1116805673]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 75
+text = "Cool Game :D"
+horizontal_alignment = 1
+
+[node name="Start" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=744270468]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_neighbor_top = NodePath("../Quit")
+focus_neighbor_bottom = NodePath("../Quit")
+focus_next = NodePath("../Quit")
+focus_previous = NodePath("../Quit")
+theme_override_font_sizes/font_size = 30
+text = "Start"
+
+[node name="How to play" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1537360870]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_neighbor_top = NodePath("../Quit")
+focus_neighbor_bottom = NodePath("../Quit")
+focus_next = NodePath("../Quit")
+focus_previous = NodePath("../Quit")
+theme_override_font_sizes/font_size = 30
+text = "How to play"
+
+[node name="Quit" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=61546512]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_neighbor_top = NodePath("../Start")
+focus_neighbor_bottom = NodePath("../Start")
+focus_next = NodePath("../Start")
+focus_previous = NodePath("../Start")
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
+[node name="ArtWork" type="ColorRect" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=692391659]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+color = Color(1, 0.32941177, 0.2627451, 0)
+
+[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/How to play" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

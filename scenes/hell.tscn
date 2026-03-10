@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://esn233gqaui"]
+
+[ext_resource type="Script" uid="uid://caidmwhfuph1p" path="res://scripts/hell.gd" id="1_tf2ar"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvh5c"]
+size = Vector2(100, 100)
+
+[node name="Hell" type="Area2D" unique_id=2072923146]
+script = ExtResource("1_tf2ar")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=622991213]
+shape = SubResource("RectangleShape2D_vvh5c")

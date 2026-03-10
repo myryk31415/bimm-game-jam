@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dremquw42hxxn"]
+
+[ext_resource type="Script" uid="uid://bojeahfey8m0t" path="res://scripts/movable.gd" id="1_8fq6o"]
+[ext_resource type="Texture2D" uid="uid://ul4h705ioca3" path="res://ampel_mann.jpg" id="1_df2ig"]
+[ext_resource type="Script" uid="uid://cgxq5sokmmhv3" path="res://scripts/drag_and_drop.gd" id="3_4mg2c"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pyidc"]
+bounce = 0.2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pyidc"]
+size = Vector2(18.75, 18.75)
+
+[node name="Movable 1" type="RigidBody2D" unique_id=1422847293 groups=["movable"]]
+z_index = 1
+y_sort_enabled = true
+physics_material_override = SubResource("PhysicsMaterial_pyidc")
+gravity_scale = 0.0
+script = ExtResource("1_8fq6o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=17134577]
+scale = Vector2(2.56, 2.56)
+shape = SubResource("RectangleShape2D_pyidc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1033016650]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_df2ig")
+
+[node name="Control" type="Control" parent="." unique_id=824999689]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.600006
+offset_top = -25.600006
+offset_right = 25.599995
+offset_bottom = 25.599995
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_4mg2c")

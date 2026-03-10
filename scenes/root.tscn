@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cufyaeufrhkn7"]
+
+[ext_resource type="Script" uid="uid://lkcv2tpdueam" path="res://scripts/hell.gd" id="1_lrqlo"]
+[ext_resource type="PackedScene" uid="uid://dremquw42hxxn" path="res://scenes/movable.tscn" id="2_sqa0i"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vvh5c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvh5c"]
+size = Vector2(16.6, 15.400001)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_28aoi"]
+specular_color = Color(0.7495323, 0.052202746, 0.17160407, 1)
+
+[node name="Game" type="Node2D" unique_id=1907543966]
+position = Vector2(924, 272)
+
+[node name="Hell" type="Node2D" parent="." unique_id=1345995876 groups=["hell"]]
+position = Vector2(0, 342)
+
+[node name="Sprite2D" type="Sprite2D" parent="Hell" unique_id=1266221414]
+scale = Vector2(1600, 320)
+texture = SubResource("PlaceholderTexture2D_vvh5c")
+
+[node name="Area2D" type="Area2D" parent="Hell" unique_id=1231527275]
+scale = Vector2(100, 20)
+script = ExtResource("1_lrqlo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hell/Area2D" unique_id=1237172472]
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_vvh5c")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=2052106642]
+position = Vector2(138, 364)
+scale = Vector2(100, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1219422432]
+shape = SubResource("RectangleShape2D_vvh5c")
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=2145532981]
+position = Vector2(0, -0.5)
+scale = Vector2(20, 19)
+texture = SubResource("CanvasTexture_28aoi")
+
+[node name="Movable 1" parent="." unique_id=1422847293 instance=ExtResource("2_sqa0i")]

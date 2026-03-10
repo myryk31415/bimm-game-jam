@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var walking_sound = $walking_sound
+
 signal end_level
 
 const SPEED = 300.0
@@ -21,8 +23,11 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * SPEED
+		if not walking_sound.playing:
+			walking_sound.play()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		walking_sound.stop()
 
 	if velocity.x > 0:
 		%AnimatedSprite2D.play("walk")

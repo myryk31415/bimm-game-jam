@@ -8,11 +8,18 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 var game_ended = false
+var flipping = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+		if Input.is_action_just_pressed("flip") and not flipping:
+			flipping = true
+			%AnimationPlayer.play("flip")
+		if Input.is_action_just_pressed("backflip") and not flipping:
+			flipping = true
+			%AnimationPlayer.play("backflip")
 	
 	# Handle jump.
 	if (Input.is_action_just_pressed("up") or Input.is_action_just_pressed("jump")) and is_on_floor():
@@ -47,3 +54,11 @@ func _physics_process(delta: float) -> void:
 				if not game_ended:
 					emit_signal("end_level")
 				game_ended = true
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "flip":
+		flipping = false
+	if anim_name == "backflip":
+		flipping = false
+	%AnimationPlayer.play("RESET")

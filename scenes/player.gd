@@ -24,6 +24,14 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	if velocity.x > 0:
+		%AnimatedSprite2D.play("walk")
+		%AnimatedSprite2D.flip_h = false
+	elif velocity.x < 0:
+		%AnimatedSprite2D.play("walk")
+		%AnimatedSprite2D.flip_h = true
+	else:
+		%AnimatedSprite2D.play("stand")
 	move_and_slide()
 	get_last_slide_collision()
 	

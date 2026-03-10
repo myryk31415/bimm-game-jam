@@ -21,9 +21,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0.15686275, 1, 1)
 
-[node name="Player" parent="." unique_id=1278691344 instance=ExtResource("2_rus8k")]
-position = Vector2(139, 1012)
-
 [node name="ColorRect" type="ColorRect" parent="." unique_id=662733887]
 offset_left = 124.0
 offset_top = 109.0
@@ -41,6 +38,9 @@ autoplay = true
 [node name="Hell" parent="." unique_id=2072923146 instance=ExtResource("5_fcfvj")]
 position = Vector2(1491.0001, 844)
 scale = Vector2(30, 5)
+
+[node name="Player" parent="." unique_id=1278691344 instance=ExtResource("2_rus8k")]
+position = Vector2(154, 902)
 
 [node name="Movable 1" parent="." unique_id=1422847293 instance=ExtResource("6_pa8r4")]
 position = Vector2(404, 283)

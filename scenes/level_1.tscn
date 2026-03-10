@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://bs32afr8p37sn"]
+[gd_scene format=3 uid="uid://gm3a5mc7wddc"]
 
 [ext_resource type="Script" uid="uid://buqjxyql2q01y" path="res://scenes/level_1.gd" id="1_rus8k"]
-[ext_resource type="PackedScene" uid="uid://bkips5lvc732j" path="res://scenes/level_boundaries.tscn" id="2_bswci"]
+[ext_resource type="PackedScene" path="res://scenes/level_boundaries.tscn" id="2_bswci"]
 [ext_resource type="PackedScene" uid="uid://r0caupxdyhlg" path="res://scenes/player.tscn" id="2_rus8k"]
+[ext_resource type="AudioStream" uid="uid://cjpsqn7ew8jcj" path="res://Sounds/ambience_cave.wav" id="4_5xbjy"]
 
 [node name="Level1" type="Node2D" unique_id=444509381]
 script = ExtResource("1_rus8k")
@@ -30,5 +31,9 @@ offset_bottom = 830.0
 [node name="Level Boundaries" parent="." unique_id=1215968374 instance=ExtResource("2_bswci")]
 start = -50
 end = 1000
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2008284450]
+stream = ExtResource("4_5xbjy")
+autoplay = true
 
 [connection signal="end_level" from="Player" to="." method="_on_player_end_level"]

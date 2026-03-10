@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cj8bk2jasvro" path="res://assets/character/feargameChar_Walk2.png" id="3_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://djsobu14tpw07" path="res://assets/character/feargameChar_Walk3.png" id="4_fjrip"]
 [ext_resource type="Texture2D" uid="uid://bbn1xkn5gwfx0" path="res://assets/character/feargameChar_Walk4.png" id="5_smehm"]
+[ext_resource type="AudioStream" uid="uid://dx2lh6o8u35ff" path="res://Sounds/walking_sound.wav" id="2_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(120, 355)
@@ -52,3 +53,5 @@ limit_bottom = 730
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_ur7pv")
 animation = &"walk"
+[node name="walking_sound" type="AudioStreamPlayer" parent="." unique_id=716373013]
+stream = ExtResource("2_g2els")

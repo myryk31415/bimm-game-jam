@@ -12,4 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_player_end_level() -> void:
-	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+	reset()
+
+func reset():
+	get_tree().change_scene_to_file("res://scenes/" + get_tree().current_scene.name.to_snake_case() + ".tscn")

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bs32afr8p37sn"]
+
+[ext_resource type="Script" uid="uid://buqjxyql2q01y" path="res://scenes/level_1.gd" id="1_rus8k"]
+[ext_resource type="PackedScene" uid="uid://bkips5lvc732j" path="res://scenes/level_boundaries.tscn" id="2_bswci"]
+[ext_resource type="PackedScene" uid="uid://r0caupxdyhlg" path="res://scenes/player.tscn" id="2_rus8k"]
+
+[node name="Level1" type="Node2D" unique_id=444509381]
+script = ExtResource("1_rus8k")
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=1147377621]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=164672432]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.15686275, 1, 1)
+
+[node name="Player" parent="." unique_id=1278691344 instance=ExtResource("2_rus8k")]
+position = Vector2(139, 1012)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=662733887]
+offset_left = 124.0
+offset_top = 109.0
+offset_right = 164.0
+offset_bottom = 830.0
+
+[node name="Level Boundaries" parent="." unique_id=1215968374 instance=ExtResource("2_bswci")]
+start = -50
+end = 500
+
+[connection signal="end_level" from="Player" to="." method="_on_player_end_level"]

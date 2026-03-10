@@ -1,34 +1,54 @@
 [gd_scene format=3 uid="uid://r0caupxdyhlg"]
 
 [ext_resource type="Script" uid="uid://d16gl0rcmtt5o" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://bmrprm8i6xoeg" path="res://assets/character/feargameChar_Walk1.png" id="2_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://cj8bk2jasvro" path="res://assets/character/feargameChar_Walk2.png" id="3_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://djsobu14tpw07" path="res://assets/character/feargameChar_Walk3.png" id="4_fjrip"]
+[ext_resource type="Texture2D" uid="uid://bbn1xkn5gwfx0" path="res://assets/character/feargameChar_Walk4.png" id="5_smehm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(120, 133)
+size = Vector2(120, 355)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ur7pv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tuyoq")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qlg0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tuyoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fjrip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_smehm")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D" unique_id=1278691344]
 script = ExtResource("1_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=708228493]
+position = Vector2(0, -4.5)
 shape = SubResource("RectangleShape2D_g2els")
-
-[node name="Ampelmann" type="ColorRect" parent="." unique_id=1501415594]
-unique_name_in_owner = true
-offset_left = -60.000004
-offset_top = -67.0
-offset_right = 353.6364
-offset_bottom = 394.89392
-scale = Vector2(0.2901099, 0.29010993)
-color = Color(0.26061058, 1, 0.14840168, 1)
-
-[node name="Ampelmann_rot" type="ColorRect" parent="." unique_id=1534079572]
-unique_name_in_owner = true
-offset_left = -60.000004
-offset_top = -67.0
-offset_right = 353.63638
-offset_bottom = 394.8939
-scale = Vector2(0.2901099, 0.29010993)
-color = Color(1, 0.3547017, 0.14347064, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1272232748]
 limit_top = 730
 limit_bottom = 730
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=550679368]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_ur7pv")
+animation = &"walk"

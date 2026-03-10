@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bkips5lvc732j"]
+
+[ext_resource type="Script" uid="uid://chranxfq44cx" path="res://scenes/level_boundaries.gd" id="1_u3vv1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_siidf"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u3vv1"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c41w6"]
+
+[node name="Level Boundaries" type="StaticBody2D" unique_id=1215968374]
+script = ExtResource("1_u3vv1")
+
+[node name="End" type="CollisionShape2D" parent="." unique_id=1618286374 groups=["EndLevel"]]
+unique_name_in_owner = true
+shape = SubResource("WorldBoundaryShape2D_siidf")
+
+[node name="Start" type="CollisionShape2D" parent="." unique_id=813395464]
+unique_name_in_owner = true
+shape = SubResource("WorldBoundaryShape2D_u3vv1")
+
+[node name="Floor" type="CollisionShape2D" parent="." unique_id=596808966]
+position = Vector2(0, 1080)
+shape = SubResource("WorldBoundaryShape2D_c41w6")

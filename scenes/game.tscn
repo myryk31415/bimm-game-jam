@@ -1,14 +1,28 @@
 [gd_scene format=3 uid="uid://cbky1x125obya"]
 
 [ext_resource type="PackedScene" uid="uid://r0caupxdyhlg" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://c4iuum3gtam3x" path="res://scenes/floor.tscn" id="1_yqjtg"]
 
 [node name="Game" type="Node2D" unique_id=444509381]
 
-[node name="Background" type="ColorRect" parent="." unique_id=164672432]
-offset_left = 1.0
-offset_right = 1164.0
-offset_bottom = 660.0
+[node name="Background" type="CanvasLayer" parent="." unique_id=1147377621]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=164672432]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(1, 0.15686275, 1, 1)
 
+[node name="Floor" parent="." unique_id=1215968374 instance=ExtResource("1_yqjtg")]
+
 [node name="Player" parent="." unique_id=1278691344 instance=ExtResource("1_uwrxv")]
-position = Vector2(88, 585)
+position = Vector2(139, 1012)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=662733887]
+offset_left = 124.0
+offset_top = 109.0
+offset_right = 164.0
+offset_bottom = 830.0

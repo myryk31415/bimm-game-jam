@@ -30,4 +30,5 @@ scale = Vector2(0.2901099, 0.29010993)
 color = Color(1, 0.3547017, 0.14347064, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1272232748]
-offset = Vector2(0, -350)
+limit_top = 730
+limit_bottom = 730

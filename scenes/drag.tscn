@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://biw0kklajn81k" path="res://icon.svg" id="2_g5hq8"]
 
 [node name="drag" type="StaticBody2D" unique_id=1586559094]
+collision_layer = 32769
 input_pickable = true
 script = ExtResource("1_e7yra")
 

@@ -1,6 +1,12 @@
 extends StaticBody2D
 
-@export var draggable: bool
+@export var draggable: bool:
+	set(value):
+		draggable = value
+		if value:
+			set_collision_layer_value(1, false)
+		else:
+			set_collision_layer_value(1, true)
 
 @export var texture: Texture2D:
 	set(value):

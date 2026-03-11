@@ -46,12 +46,18 @@ func _process(_delta: float) -> void:
 			#is_grabbed = false
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.is_pressed() and draggable:
-			is_grabbed = true
-			scale = Vector2(1.2, 1.2)
-			mouse_start_pos = get_global_mouse_position()
-			item_start_pos = global_position
-		else:
-			is_grabbed = false
-			scale = Vector2(1, 1)
+	if event is InputEventMouseButton:
+		match event.button_index:
+			MOUSE_BUTTON_LEFT:
+				if event.is_pressed() and draggable:
+					is_grabbed = true
+					scale = Vector2(1.2, 1.2)
+					mouse_start_pos = get_global_mouse_position()
+					item_start_pos = global_position
+				else:
+					is_grabbed = false
+					scale = Vector2(1, 1)
+			MOUSE_BUTTON_WHEEL_UP:
+				rotate(0.1)
+			MOUSE_BUTTON_WHEEL_DOWN:
+				rotate(-0.1)

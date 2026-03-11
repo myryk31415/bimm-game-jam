@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bbbpj7xe0huv3" path="res://assets/Background.png" id="2_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://r0caupxdyhlg" path="res://scenes/player.tscn" id="2_rus8k"]
 [ext_resource type="AudioStream" uid="uid://cjpsqn7ew8jcj" path="res://Sounds/ambience_cave.wav" id="4_5xbjy"]
-[ext_resource type="PackedScene" uid="uid://esn233gqaui" path="res://scenes/hell.tscn" id="5_fcfvj"]
-[ext_resource type="PackedScene" uid="uid://dremquw42hxxn" path="res://scenes/movable.tscn" id="6_pa8r4"]
+[ext_resource type="Texture2D" uid="uid://dugwq48t3s1uv" path="res://assets/Spider1.png" id="7_pa8r4"]
+[ext_resource type="PackedScene" uid="uid://dkfhmnuke066g" path="res://scenes/drag.tscn" id="8_15mv3"]
 
 [node name="Level1" type="Node2D" unique_id=444509381]
 script = ExtResource("1_rus8k")
@@ -36,17 +36,11 @@ end = 1920
 stream = ExtResource("4_5xbjy")
 autoplay = true
 
-[node name="Hell" parent="." unique_id=2072923146 instance=ExtResource("5_fcfvj")]
-position = Vector2(1491, 813.775)
-scale = Vector2(30, 5.32)
-
 [node name="Player" parent="." unique_id=1278691344 instance=ExtResource("2_rus8k")]
 position = Vector2(108, 820)
 
-[node name="Movable 1" parent="." unique_id=1422847293 instance=ExtResource("6_pa8r4")]
-position = Vector2(404, 283)
-
-[node name="Movable 2" parent="." unique_id=1995358909 instance=ExtResource("6_pa8r4")]
-position = Vector2(924, 267)
+[node name="Spinne" parent="." unique_id=996746160 instance=ExtResource("8_15mv3")]
+position = Vector2(304, 154)
+texture = ExtResource("7_pa8r4")
 
 [connection signal="end_level" from="Player" to="." method="_on_player_end_level"]

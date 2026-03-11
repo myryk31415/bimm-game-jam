@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://r0caupxdyhlg"]
 
+[ext_resource type="Texture2D" uid="uid://b6hekmatf7775" path="res://assets/character/feargameChar_crying/feargameChar_crying1.png" id="1_d2wvv"]
+[ext_resource type="Texture2D" uid="uid://bxrctc313fo66" path="res://assets/character/feargameChar_idle/feargameChar_idle1.png" id="1_fjrip"]
+[ext_resource type="Texture2D" uid="uid://chdunkm4itu6g" path="res://assets/character/feargameChar_crying/feargameChar_crying2.png" id="2_3v2ag"]
 [ext_resource type="AudioStream" uid="uid://dx2lh6o8u35ff" path="res://Sounds/walking_sound.wav" id="2_g2els"]
 [ext_resource type="Texture2D" uid="uid://bmrprm8i6xoeg" path="res://assets/character/feargameChar_Walk1.png" id="2_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://dlplpexxuk8mf" path="res://assets/character/feargameChar_idle/feargameChar_idle2.png" id="2_smehm"]
+[ext_resource type="Texture2D" uid="uid://324jiyrtvpc0" path="res://assets/character/feargameChar_crying/feargameChar_crying3.png" id="3_jej6c"]
 [ext_resource type="Texture2D" uid="uid://cj8bk2jasvro" path="res://assets/character/feargameChar_Walk2.png" id="3_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://ceedjcmiw7mlx" path="res://assets/character/feargameChar_crying/feargameChar_crying4.png" id="4_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://djsobu14tpw07" path="res://assets/character/feargameChar_Walk3.png" id="4_fjrip"]
 [ext_resource type="Texture2D" uid="uid://bbn1xkn5gwfx0" path="res://assets/character/feargameChar_Walk4.png" id="5_smehm"]
 
@@ -52,7 +58,7 @@ func _physics_process(delta: float) -> void:
 		%AnimatedSprite2D.play(\"walk\")
 		%AnimatedSprite2D.flip_h = true
 	else:
-		%AnimatedSprite2D.play(\"stand\")
+		%AnimatedSprite2D.play(\"idle\")
 	move_and_slide()
 	get_last_slide_collision()
 	
@@ -74,17 +80,37 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(120, 355)
+size = Vector2(120, 344)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ur7pv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_tuyoq")
+"texture": ExtResource("1_d2wvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3v2ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jej6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f1ej7")
 }],
 "loop": true,
-"name": &"stand",
+"name": &"crying",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fjrip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_smehm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -160,14 +186,14 @@ _data = {
 script = SubResource("GDScript_qlg0r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=708228493]
-position = Vector2(0, -4.5)
-rotation = 6.2831855
+position = Vector2(-9.616506e-07, 1)
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=550679368]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_ur7pv")
 animation = &"walk"
+frame_progress = 0.97819483
 
 [node name="walking_sound" type="AudioStreamPlayer" parent="." unique_id=716373013]
 stream = ExtResource("2_g2els")

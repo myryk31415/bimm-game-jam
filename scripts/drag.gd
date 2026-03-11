@@ -31,9 +31,8 @@ extends StaticBody2D
 			if %Sprite2D.centered:
 				collision_polygon.position -= Vector2(bitmap.get_size()/2)
 
-@export var sound: AudioStream:
-	set(value):
-		%AudioStreamPlayer.stream = value
+@export var sounds: Array[AudioStream]= []
+
 
 var is_grabbed: bool = false
 
@@ -57,6 +56,7 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 		match event.button_index:
 			MOUSE_BUTTON_LEFT:
 				if not %AudioStreamPlayer.playing and event.is_pressed():
+					%AudioStreamPlayer.stream = sounds.pick_random()
 					%AudioStreamPlayer.play()
 				if event.is_pressed() and draggable:
 					is_grabbed = true

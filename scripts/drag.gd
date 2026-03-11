@@ -32,8 +32,6 @@ extends StaticBody2D
 				collision_polygon.position -= Vector2(bitmap.get_size()/2)
 
 var is_grabbed: bool = false
-var mouse_start_pos
-var item_start_pos
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -43,8 +41,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if is_grabbed:
-		var mouse_pos = get_global_mouse_position()
-		global_position = mouse_pos - mouse_start_pos + item_start_pos
+		global_position = get_global_mouse_position()
 
 #func _input(event: InputEvent) -> void:
 	#if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -58,12 +55,12 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 				if event.is_pressed() and draggable:
 					is_grabbed = true
 					scale = Vector2(1.2, 1.2)
-					mouse_start_pos = get_global_mouse_position()
-					item_start_pos = global_position
 				else:
 					is_grabbed = false
 					scale = Vector2(1, 1)
 			MOUSE_BUTTON_WHEEL_UP:
-				rotate(0.1)
+				if is_grabbed:
+					rotate(0.1)
 			MOUSE_BUTTON_WHEEL_DOWN:
-				rotate(-0.1)
+				if is_grabbed:
+					rotate(-0.1)

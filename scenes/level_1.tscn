@@ -7,6 +7,17 @@
 [ext_resource type="AudioStream" uid="uid://cjpsqn7ew8jcj" path="res://Sounds/ambience_cave.wav" id="4_5xbjy"]
 [ext_resource type="Texture2D" uid="uid://o2mrp6teojan" path="res://assets/ElinAssets/Spider1.png" id="7_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://dkfhmnuke066g" path="res://scenes/drag.tscn" id="8_15mv3"]
+[ext_resource type="Texture2D" uid="uid://dg6oe5cg3axo4" path="res://assets/ElinAssets/Unicorn.png" id="8_e3sih"]
+[ext_resource type="Texture2D" uid="uid://prftfexjrbyb" path="res://assets/ElinAssets/IceCream.png" id="9_e3sih"]
+[ext_resource type="Texture2D" uid="uid://e50nw4c6g7aa" path="res://assets/ElinAssets/Fire.png" id="10_2y5yt"]
+[ext_resource type="Texture2D" uid="uid://dt4sp1yjqsxrx" path="res://assets/ElinAssets/Butterfly.png" id="11_go7sj"]
+[ext_resource type="Texture2D" uid="uid://1tquwagc1xd5" path="res://assets/ElinAssets/Bow.png" id="12_7gny6"]
+[ext_resource type="Texture2D" uid="uid://u46b1ads7j7s" path="res://assets/ElinAssets/Fart.png" id="13_7gny6"]
+[ext_resource type="Texture2D" uid="uid://c1sm6bdnderep" path="res://assets/ElinAssets/Muffin.png" id="14_x2xxo"]
+[ext_resource type="Texture2D" uid="uid://ch5csu2wpxfci" path="res://assets/ElinAssets/Soap.png" id="15_2cbcq"]
+[ext_resource type="Texture2D" uid="uid://ccdg0hsswfstc" path="res://assets/ElinAssets/Sparkle.png" id="16_isj1j"]
+[ext_resource type="Texture2D" uid="uid://ddolwedrcdqvm" path="res://assets/ElinAssets/WaterDrop.png" id="17_so66j"]
+[ext_resource type="Texture2D" uid="uid://b1h5rfnbatl46" path="res://assets/ElinAssets/Cloud.png" id="18_tr1x6"]
 
 [node name="Level1" type="Node2D" unique_id=444509381]
 script = ExtResource("1_rus8k")
@@ -39,9 +50,59 @@ autoplay = true
 [node name="Player" parent="." unique_id=1278691344 instance=ExtResource("2_rus8k")]
 position = Vector2(108, 820)
 
-[node name="Spinne" parent="." unique_id=996746160 instance=ExtResource("8_15mv3")]
-position = Vector2(686, 863)
-draggable = true
+[node name="Spider" parent="." unique_id=996746160 instance=ExtResource("8_15mv3")]
+position = Vector2(640, 904)
 texture = ExtResource("7_pa8r4")
+
+[node name="Unicorn" parent="." unique_id=1586559094 instance=ExtResource("8_15mv3")]
+position = Vector2(1091, 328)
+texture = ExtResource("8_e3sih")
+
+[node name="IceCream" parent="." unique_id=1547382436 instance=ExtResource("8_15mv3")]
+position = Vector2(844, 288)
+draggable = true
+texture = ExtResource("9_e3sih")
+
+[node name="Fire" parent="." unique_id=2146614021 instance=ExtResource("8_15mv3")]
+position = Vector2(1064, 1032)
+texture = ExtResource("10_2y5yt")
+
+[node name="Butterfly" parent="." unique_id=1518474956 instance=ExtResource("8_15mv3")]
+position = Vector2(130, 270)
+texture = ExtResource("11_go7sj")
+
+[node name="Bow" parent="." unique_id=791298815 instance=ExtResource("8_15mv3")]
+position = Vector2(212, 192)
+draggable = true
+texture = ExtResource("12_7gny6")
+
+[node name="Fart" parent="." unique_id=1435724302 instance=ExtResource("8_15mv3")]
+position = Vector2(1406, 321)
+draggable = true
+texture = ExtResource("13_7gny6")
+
+[node name="Muffin" parent="." unique_id=321348595 instance=ExtResource("8_15mv3")]
+position = Vector2(1677, 452)
+draggable = true
+texture = ExtResource("14_x2xxo")
+
+[node name="Soap" parent="." unique_id=943966003 instance=ExtResource("8_15mv3")]
+position = Vector2(1725, 156)
+draggable = true
+texture = ExtResource("15_2cbcq")
+
+[node name="Sparkle" parent="." unique_id=2137941298 instance=ExtResource("8_15mv3")]
+position = Vector2(1265, 186)
+texture = ExtResource("16_isj1j")
+
+[node name="WaterDrop" parent="." unique_id=1570758714 instance=ExtResource("8_15mv3")]
+position = Vector2(583, 213)
+draggable = true
+texture = ExtResource("17_so66j")
+
+[node name="drag" parent="." unique_id=76029429 instance=ExtResource("8_15mv3")]
+position = Vector2(503, 86)
+draggable = true
+texture = ExtResource("18_tr1x6")
 
 [connection signal="end_level" from="Player" to="." method="_on_player_end_level"]

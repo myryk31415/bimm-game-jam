@@ -12,4 +12,7 @@ script = ExtResource("1_e7yra")
 unique_name_in_owner = true
 texture = ExtResource("2_g5hq8")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1513063433]
+unique_name_in_owner = true
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]

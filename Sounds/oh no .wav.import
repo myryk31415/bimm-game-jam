@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c1g5tnyxougar"
+path="res://.godot/imported/oh no .wav-e6d18689b2587485d403868a7ec2bc2a.sample"
+
+[deps]
+
+source_file="res://Sounds/oh no .wav"
+dest_files=["res://.godot/imported/oh no .wav-e6d18689b2587485d403868a7ec2bc2a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

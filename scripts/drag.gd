@@ -31,6 +31,10 @@ extends StaticBody2D
 			if %Sprite2D.centered:
 				collision_polygon.position -= Vector2(bitmap.get_size()/2)
 
+@export var sound: AudioStream:
+	set(value):
+		%AudioStreamPlayer.stream = value
+
 var is_grabbed: bool = false
 
 # Called when the node enters the scene tree for the first time.
@@ -52,6 +56,8 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 	if event is InputEventMouseButton:
 		match event.button_index:
 			MOUSE_BUTTON_LEFT:
+				if not %AudioStreamPlayer.playing and event.is_pressed():
+					%AudioStreamPlayer.play()
 				if event.is_pressed() and draggable:
 					is_grabbed = true
 					scale = Vector2(1.2, 1.2)

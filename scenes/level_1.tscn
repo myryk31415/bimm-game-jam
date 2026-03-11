@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bs32afr8p37sn"]
 
-[ext_resource type="Script" uid="uid://buqjxyql2q01y" path="res://scenes/level_1.gd" id="1_rus8k"]
+[ext_resource type="Script" uid="uid://buqjxyql2q01y" path="res://scripts/level_1.gd" id="1_rus8k"]
 [ext_resource type="PackedScene" uid="uid://bkips5lvc732j" path="res://scenes/level_boundaries.tscn" id="2_bswci"]
 [ext_resource type="PackedScene" uid="uid://r0caupxdyhlg" path="res://scenes/player.tscn" id="2_rus8k"]
 [ext_resource type="AudioStream" uid="uid://cjpsqn7ew8jcj" path="res://Sounds/ambience_cave.wav" id="4_5xbjy"]

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bbbpj7xe0huv3" path="res://assets/Background.png" id="2_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://r0caupxdyhlg" path="res://scenes/player.tscn" id="2_rus8k"]
 [ext_resource type="AudioStream" uid="uid://cjpsqn7ew8jcj" path="res://Sounds/ambience_cave.wav" id="4_5xbjy"]
-[ext_resource type="Texture2D" uid="uid://dugwq48t3s1uv" path="res://assets/Spider1.png" id="7_pa8r4"]
+[ext_resource type="Texture2D" uid="uid://o2mrp6teojan" path="res://assets/ElinAssets/Spider1.png" id="7_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://dkfhmnuke066g" path="res://scenes/drag.tscn" id="8_15mv3"]
 
 [node name="Level1" type="Node2D" unique_id=444509381]
@@ -40,7 +40,8 @@ autoplay = true
 position = Vector2(108, 820)
 
 [node name="Spinne" parent="." unique_id=996746160 instance=ExtResource("8_15mv3")]
-position = Vector2(304, 154)
+position = Vector2(686, 863)
+draggable = true
 texture = ExtResource("7_pa8r4")
 
 [connection signal="end_level" from="Player" to="." method="_on_player_end_level"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dugwq48t3s1uv"
-path="res://.godot/imported/Spider1.png-85cc52177a93c8766bb76a39a26b9d70.ctex"
+uid="uid://dt4sp1yjqsxrx"
+path="res://.godot/imported/Butterfly.png-e506373fcb85a634fcbf99b4308f3bb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Spider1.png"
-dest_files=["res://.godot/imported/Spider1.png-85cc52177a93c8766bb76a39a26b9d70.ctex"]
+source_file="res://assets/ElinAssets/Butterfly.png"
+dest_files=["res://.godot/imported/Butterfly.png-e506373fcb85a634fcbf99b4308f3bb9.ctex"]
 
 [params]
 

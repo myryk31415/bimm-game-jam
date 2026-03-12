@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://2icwkw0t1g4h" path="res://scripts/drag.gd" id="1_e7yra"]
 [ext_resource type="Texture2D" uid="uid://biw0kklajn81k" path="res://icon.svg" id="2_g5hq8"]
+[ext_resource type="Script" uid="uid://cr2o2qeroidgj" path="res://scripts/idle_animation.gd" id="3_q8ftw"]
 
 [node name="drag" type="StaticBody2D" unique_id=1586559094]
 collision_layer = 32769
@@ -17,6 +18,9 @@ texture = ExtResource("2_g5hq8")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1513063433]
 unique_name_in_owner = true
+
+[node name="IdleAnimation" type="Node2D" parent="." unique_id=2080948628]
+script = ExtResource("3_q8ftw")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

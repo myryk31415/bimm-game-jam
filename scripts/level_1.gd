@@ -47,7 +47,7 @@ func _on_player_died() -> void:
 
 
 func _on_player_end_level() -> void:
-	reset()
+	get_tree().change_scene_to_file("res://scenes/credits.tscn")
 
 func make_item(
 	texture_path: String,

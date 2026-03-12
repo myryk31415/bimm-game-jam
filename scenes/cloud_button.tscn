@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dmx6dhbik3uim"]
 
-[ext_resource type="Script" uid="uid://rukgqcky3bxq" path="res://cloud_button.gd" id="1_phmo6"]
+[ext_resource type="Script" uid="uid://rukgqcky3bxq" path="res://scripts/cloud_button.gd" id="1_phmo6"]
 [ext_resource type="Texture2D" uid="uid://b1h5rfnbatl46" path="res://assets/ElinAssets/Cloud.png" id="1_udvqj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q3ryb"]

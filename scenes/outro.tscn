@@ -18,12 +18,12 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_0b11s")
 }, {
-"duration": 1.0,
+"duration": 4.0,
 "texture": ExtResource("5_7nwcv")
 }],
 "loop": false,
 "name": &"default",
-"speed": 1.0
+"speed": 1.5
 }]
 
 [node name="outro" type="Node2D" unique_id=1874165172]

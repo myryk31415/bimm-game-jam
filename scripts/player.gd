@@ -43,18 +43,25 @@ func _physics_process(delta: float) -> void:
 		%AnimatedSprite2D.play("walk")
 		%AnimatedSprite2D.flip_h = true
 	else:
-		%AnimatedSprite2D.play("stand")
+		%AnimatedSprite2D.play("idle")
 	move_and_slide()
-	get_last_slide_collision()
 	
 	for i in get_slide_collision_count():
-		var collider_shape = get_slide_collision(i).get_collider_shape()
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		if collider is Node:
+			if collider.is_in_group("EndLevel"):
+				die()
+		var collider_shape = collision.get_collider_shape()
 		if collider_shape is Node:
 			if collider_shape.is_in_group("EndLevel"):
-				if not game_ended:
-					emit_signal("end_level")
-				game_ended = true
+				die()
 
+func die():
+	if not game_ended:
+		%AnimationPlayer.play("death")
+		game_ended = true
+		emit_signal("end_level")
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "flip":

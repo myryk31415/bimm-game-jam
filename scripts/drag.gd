@@ -1,5 +1,7 @@
 extends StaticBody2D
 
+signal interaction
+
 @export var draggable: bool:
 	set(value):
 		draggable = value
@@ -7,6 +9,8 @@ extends StaticBody2D
 			set_collision_layer_value(1, false)
 		else:
 			set_collision_layer_value(1, true)
+
+@export var interact_with: String
 
 @export var texture: Texture2D:
 	set(value):
@@ -24,12 +28,14 @@ extends StaticBody2D
 		for poly in polys:
 			var collision_polygon = CollisionPolygon2D.new()
 			collision_polygon.polygon = poly
-			add_child(collision_polygon)
-
 			# Generated polygon will not take into account the half-width and half-height offset
 			# of the image when "centered" is on. So move it backwards by this amount so it lines up.
 			if %Sprite2D.centered:
 				collision_polygon.position -= Vector2(bitmap.get_size()/2)
+			
+			add_child(collision_polygon)
+			%Area2D.add_child(collision_polygon.duplicate())
+
 
 @export var sounds: Array[AudioStream]= []
 
@@ -70,3 +76,8 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 			MOUSE_BUTTON_WHEEL_DOWN:
 				if is_grabbed:
 					rotate(-0.1)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == interact_with:
+		interaction.emit()

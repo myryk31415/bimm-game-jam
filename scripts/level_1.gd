@@ -94,10 +94,16 @@ func _on_butterfly_interaction(from: Node2D, with: Node2D) -> void:
 
 func _on_muffin_interaction(from: Node2D, with: Node2D) -> void:
 	$Muffin/AudioStreamPlayer.stop()
-	var BurntMuffin = make_item("res://assets/ElinAssets/MuffinBurned.png",true)
-	BurntMuffin.global_position = from.global_position
-	add_child(BurntMuffin)
-	from.queue_free()
+	if with.name == "Fire":
+		var BurntMuffin = make_item("res://assets/ElinAssets/MuffinBurned.png",true)
+		BurntMuffin.global_position = from.global_position
+		add_child(BurntMuffin)
+		from.queue_free()
+	if with.name == "Spider" or with.name == "Clown":
+		var MuffinBite = make_item("res://assets/ElinAssets/MuffinBite.png",true)
+		MuffinBite.global_position = from.global_position
+		add_child(MuffinBite)
+		from.queue_free()
 
 
 func _on_star_interaction(from: Node2D, with: Node2D) -> void:

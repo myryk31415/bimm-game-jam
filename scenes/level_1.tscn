@@ -192,7 +192,7 @@ sounds = Array[AudioStream]([ExtResource("17_x2fux")])
 [node name="Muffin" parent="." unique_id=321348595 instance=ExtResource("8_15mv3")]
 position = Vector2(1088, 433)
 draggable = true
-interact_with = Array[String](["Fire"])
+interact_with = Array[String](["Fire", "Spider", "Clown"])
 texture = ExtResource("14_x2xxo")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 

@@ -147,7 +147,7 @@ sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), E
 [node name="Soap" parent="." unique_id=943966003 instance=ExtResource("8_15mv3")]
 position = Vector2(94, 442)
 draggable = true
-interact_with = Array[String](["Clown"])
+interact_with = Array[String](["Clown", "ClownBalloon"])
 texture = ExtResource("15_2cbcq")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 

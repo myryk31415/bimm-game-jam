@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cj8t7hxly41d5"]
+
+[ext_resource type="Script" uid="uid://d1bjwhbcbocgr" path="res://scripts/intro.gd" id="1_wfs7u"]
+[ext_resource type="Texture2D" uid="uid://bdjyugc6qcjmc" path="res://assets/feargameChar_IntroFrames/feargameChar_IntroFrame1.png" id="2_es01l"]
+[ext_resource type="Texture2D" uid="uid://c2oaq62fhxt2r" path="res://assets/feargameChar_IntroFrames/feargameChar_IntroFrame2.png" id="3_0naf5"]
+[ext_resource type="Texture2D" uid="uid://dexngx463fedg" path="res://assets/feargameChar_IntroFrames/feargameChar_IntroFrame3.png" id="4_bu1yb"]
+[ext_resource type="Texture2D" uid="uid://ditsmygc1tj6o" path="res://assets/feargameChar_IntroFrames/feargameChar_IntroFrame4.png" id="5_t1qkj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_272cy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_es01l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0naf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bu1yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t1qkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_es01l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0naf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bu1yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t1qkj")
+}],
+"loop": false,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="intro" type="Node2D" unique_id=1874165172]
+script = ExtResource("1_wfs7u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=666121175]
+unique_name_in_owner = true
+position = Vector2(966, 546)
+sprite_frames = SubResource("SpriteFrames_272cy")

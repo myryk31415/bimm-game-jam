@@ -95,17 +95,14 @@ sounds = Array[AudioStream]([ExtResource("8_2cbcq"), ExtResource("9_bamb7"), Ext
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Spider" unique_id=310599104]
 stream = ExtResource("20_y0ove")
 
-[node name="IceCream" parent="." unique_id=1547382436 instance=ExtResource("8_15mv3")]
-position = Vector2(1194, 271)
-draggable = true
-interact_with = Array[String](["Clown", "Spider"])
-texture = ExtResource("9_e3sih")
-sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
-
 [node name="Unicorn" parent="." unique_id=1586559094 instance=ExtResource("8_15mv3")]
 position = Vector2(1444, 299)
 texture = ExtResource("8_e3sih")
 sounds = Array[AudioStream]([ExtResource("9_d5akn"), ExtResource("10_wbtxt"), ExtResource("10_d5akn"), ExtResource("12_x2fux"), ExtResource("13_s7g0b"), ExtResource("26_lkded")])
+
+[node name="Clown" parent="." unique_id=757569316 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
+position = Vector2(1638, 813)
+texture = ExtResource("45_jscgt")
 
 [node name="Fire" parent="." unique_id=2146614021 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
 position = Vector2(1058, 874)
@@ -128,6 +125,13 @@ scale_amount_max = 0.02
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Fire" unique_id=15046184]
 stream = ExtResource("36_0bysi")
+
+[node name="IceCream" parent="." unique_id=1547382436 instance=ExtResource("8_15mv3")]
+position = Vector2(1194, 271)
+draggable = true
+interact_with = Array[String](["Clown", "Spider"])
+texture = ExtResource("9_e3sih")
+sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="Butterfly" parent="." unique_id=1518474956 instance=ExtResource("8_15mv3")]
 position = Vector2(1757, 114)
@@ -204,10 +208,6 @@ draggable = true
 interact_with = Array[String](["Fire"])
 texture = ExtResource("17_so66j")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
-
-[node name="Clown" parent="." unique_id=757569316 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
-position = Vector2(1638, 813)
-texture = ExtResource("45_jscgt")
 
 [node name="Bubble" parent="." unique_id=287188484 instance=ExtResource("8_15mv3")]
 position = Vector2(141, 380)

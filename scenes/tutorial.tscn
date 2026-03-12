@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dyn3xxxug5sci"]
 
 [ext_resource type="Script" uid="uid://bbsqghkgqfnx8" path="res://scripts/tutorial.gd" id="1_8ho6b"]
-[ext_resource type="PackedScene" uid="uid://dmx6dhbik3uim" path="res://scenes/cloud_button.tscn" id="2_8ho6b"]
+[ext_resource type="PackedScene" path="res://scenes/cloud_button.tscn" id="2_8ho6b"]
 
 [node name="Tutorial" type="CanvasLayer" unique_id=1098373884]
 script = ExtResource("1_8ho6b")
@@ -51,8 +51,14 @@ text = "Walk with A/left_arrow, D/right_arrow and jump with W/up_arrow.
 Drag and drop objects from the upper part of the level
 to the lower part in order to find a way to avoid the scary obstacles.
 
+If you are feeling creative, feel free to post 
+a screenshot of the main level on social media 
+and show the world how you arranged the objects.
+
 Take your time to enjoy the visuals
 and music!
+
+PS: psst there could be a hidden character move... 
 "
 horizontal_alignment = 1
 

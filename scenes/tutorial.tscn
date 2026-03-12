@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dyn3xxxug5sci"]
 
-[ext_resource type="Script" uid="uid://bbsqghkgqfnx8" path="res://scenes/tutorial.gd" id="1_8ho6b"]
-[ext_resource type="Texture2D" uid="uid://cxxn6b7dcisha" path="res://assets/main_menu.jpeg" id="2_ph3nu"]
+[ext_resource type="Script" uid="uid://bbsqghkgqfnx8" path="res://scripts/tutorial.gd" id="1_8ho6b"]
 
 [node name="Tutorial" type="CanvasLayer" unique_id=1098373884]
 script = ExtResource("1_8ho6b")
@@ -9,7 +8,6 @@ script = ExtResource("1_8ho6b")
 [node name="TextureRect" type="TextureRect" parent="." unique_id=427475515]
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("2_ph3nu")
 expand_mode = 1
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=333882924]
@@ -48,11 +46,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/outline_size = 7
 theme_override_font_sizes/font_size = 25
-text = "Walk with A and D, jump with spacebar.
-Use 1 to 5 to select a mask. Pick the right
-mask to not gain stress or loose health.
-If stress is full or health is empty, the game
-ends.  The environments loop endlessly :)
+text = "Walk with A/left_arrow, D/right_arrow and jump with W/up_arrow. 
+Drag and drop objects from the upper part of the level
+to the lower part in order to find a way to avoid the scary obstacles.
 
 Take your time to enjoy the visuals
 and music!

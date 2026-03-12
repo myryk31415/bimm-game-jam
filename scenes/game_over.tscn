@@ -53,16 +53,16 @@ text = "GAME
 OVER"
 horizontal_alignment = 1
 
-[node name="MainMenu" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=894932201 instance=ExtResource("2_wqhvx")]
-layout_mode = 2
-text = "Main Menu"
-
 [node name="Retry" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1616715936 instance=ExtResource("2_wqhvx")]
 layout_mode = 2
 text = "Retry"
 
+[node name="MainMenu" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=894932201 instance=ExtResource("2_wqhvx")]
+layout_mode = 2
+text = "Main Menu"
+
 [node name="GameOverSound" type="AudioStreamPlayer" parent="." unique_id=2050349719]
 autoplay = true
 
-[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]

@@ -7,8 +7,15 @@ signal interaction(from: Node2D, with: Node2D)
 		draggable = value
 		if value:
 			set_collision_layer_value(1, false)
-		else:
+		elif collidable:
 			set_collision_layer_value(1, true)
+
+@export var collidable: bool:
+	set(value):
+		if value and not draggable:
+			set_collision_layer_value(1, true)
+		else:
+			set_collision_layer_value(1, false)
 
 @export var interact_with: Array[String]
 

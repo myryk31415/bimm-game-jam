@@ -59,18 +59,6 @@
 [node name="Level1" type="Node2D" unique_id=444509381]
 script = ExtResource("1_rus8k")
 
-[node name="Background" type="CanvasLayer" parent="." unique_id=1147377621]
-layer = -1
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="Background" unique_id=164672432]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0.15686275, 1, 1)
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1179163203]
 position = Vector2(959.2, 539)
 texture = ExtResource("2_pa8r4")
@@ -84,31 +72,28 @@ end = 1920
 stream = ExtResource("4_5xbjy")
 autoplay = true
 
-[node name="Player" parent="." unique_id=1278691344 instance=ExtResource("2_rus8k")]
-position = Vector2(108, 820)
-
 [node name="Spider" parent="." unique_id=996746160 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
 position = Vector2(640, 904)
+collidable = true
 texture = ExtResource("7_pa8r4")
 sounds = Array[AudioStream]([ExtResource("8_2cbcq"), ExtResource("9_bamb7"), ExtResource("10_8jqp6"), ExtResource("11_jscgt"), ExtResource("12_0bysi"), ExtResource("8_tr1x6"), ExtResource("14_y0ove"), ExtResource("15_awarj"), ExtResource("16_uuj1x"), ExtResource("17_3x5jj"), ExtResource("18_75ls7"), ExtResource("19_gwsl1")])
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Spider" unique_id=310599104]
 stream = ExtResource("20_y0ove")
 
-[node name="IceCream" parent="." unique_id=1547382436 instance=ExtResource("8_15mv3")]
-position = Vector2(1194, 271)
-draggable = true
-interact_with = Array[String](["Clown", "Spider"])
-texture = ExtResource("9_e3sih")
-sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
-
 [node name="Unicorn" parent="." unique_id=1586559094 instance=ExtResource("8_15mv3")]
 position = Vector2(1444, 299)
 texture = ExtResource("8_e3sih")
 sounds = Array[AudioStream]([ExtResource("9_d5akn"), ExtResource("10_wbtxt"), ExtResource("10_d5akn"), ExtResource("12_x2fux"), ExtResource("13_s7g0b"), ExtResource("26_lkded")])
 
+[node name="Clown" parent="." unique_id=757569316 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
+position = Vector2(1638, 813)
+collidable = true
+texture = ExtResource("45_jscgt")
+
 [node name="Fire" parent="." unique_id=2146614021 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
 position = Vector2(1058, 874)
+collidable = true
 texture = ExtResource("10_2y5yt")
 sounds = Array[AudioStream]([ExtResource("33_ffvxj"), ExtResource("13_wbtxt")])
 
@@ -128,6 +113,23 @@ scale_amount_max = 0.02
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Fire" unique_id=15046184]
 stream = ExtResource("36_0bysi")
+
+[node name="Shoe" parent="." unique_id=240120927 instance=ExtResource("8_15mv3")]
+position = Vector2(1562, 994)
+draggable = true
+interact_with = Array[String](["cute_spider"])
+texture = ExtResource("51_75ls7")
+sounds = Array[AudioStream]([ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("52_qb2q0"), ExtResource("53_x3eym"), ExtResource("54_ffvxj"), ExtResource("55_yfehg"), ExtResource("16_wbtxt")])
+
+[node name="Player" parent="." unique_id=1278691344 instance=ExtResource("2_rus8k")]
+position = Vector2(108, 820)
+
+[node name="IceCream" parent="." unique_id=1547382436 instance=ExtResource("8_15mv3")]
+position = Vector2(1194, 271)
+draggable = true
+interact_with = Array[String](["Clown", "Spider"])
+texture = ExtResource("9_e3sih")
+sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="Butterfly" parent="." unique_id=1518474956 instance=ExtResource("8_15mv3")]
 position = Vector2(1757, 114)
@@ -205,10 +207,6 @@ interact_with = Array[String](["Fire"])
 texture = ExtResource("17_so66j")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
-[node name="Clown" parent="." unique_id=757569316 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
-position = Vector2(1638, 813)
-texture = ExtResource("45_jscgt")
-
 [node name="Bubble" parent="." unique_id=287188484 instance=ExtResource("8_15mv3")]
 position = Vector2(141, 380)
 draggable = true
@@ -236,12 +234,7 @@ draggable = true
 interact_with = Array[String](["Fire"])
 texture = ExtResource("50_3x5jj")
 
-[node name="Shoe" parent="." unique_id=240120927 instance=ExtResource("8_15mv3")]
-position = Vector2(1562, 994)
-draggable = true
-texture = ExtResource("51_75ls7")
-sounds = Array[AudioStream]([ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("52_qb2q0"), ExtResource("53_x3eym"), ExtResource("54_ffvxj"), ExtResource("55_yfehg"), ExtResource("16_wbtxt")])
-
+[connection signal="interaction" from="Shoe" to="." method="_on_shoe_interaction"]
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="end_level" from="Player" to="." method="_on_player_end_level"]
 [connection signal="interaction" from="IceCream" to="." method="_on_ice_cream_interaction"]

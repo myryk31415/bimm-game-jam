@@ -111,6 +111,7 @@ func _on_balloons_interaction(from: Node2D, with: Node2D) -> void:
 	ClownBalloon.name = "ClownBalloon"
 	ClownBalloon.global_position = with.global_position
 	add_child(ClownBalloon)
+	$Shoe.move_to_front()
 	from.queue_free()
 	with.queue_free()
 
@@ -120,5 +121,6 @@ func _on_soap_interaction(from: Node2D, with: Node2D) -> void:
 	var ClownNoScary = make_item("res://assets/ElinAssets/ClownNoScary.png")
 	ClownNoScary.global_position = with.global_position
 	add_child(ClownNoScary)
+	$Shoe.move_to_front()
 	from.queue_free()
 	with.queue_free()

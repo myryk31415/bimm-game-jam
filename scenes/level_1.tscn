@@ -47,6 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://ct2pvf4bgwyns" path="res://assets/fire-particle.png" id="35_8jqp6"]
 [ext_resource type="AudioStream" uid="uid://dnxqjfc606dys" path="res://Sounds/extinguish_fire.wav" id="36_0bysi"]
 [ext_resource type="Texture2D" uid="uid://c0kpvqert5ksn" path="res://assets/ElinAssets/Clown.png" id="45_jscgt"]
+[ext_resource type="Texture2D" uid="uid://dvfwfa5pkg7px" path="res://assets/ElinAssets/Bubble.png" id="48_awarj"]
 
 [node name="Level1" type="Node2D" unique_id=444509381]
 script = ExtResource("1_rus8k")
@@ -87,19 +88,19 @@ sounds = Array[AudioStream]([ExtResource("8_2cbcq"), ExtResource("9_bamb7"), Ext
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Spider" unique_id=310599104]
 stream = ExtResource("20_y0ove")
 
-[node name="Unicorn" parent="." unique_id=1586559094 instance=ExtResource("8_15mv3")]
-position = Vector2(1091, 328)
-texture = ExtResource("8_e3sih")
-sounds = Array[AudioStream]([ExtResource("9_d5akn"), ExtResource("10_wbtxt"), ExtResource("10_d5akn"), ExtResource("12_x2fux"), ExtResource("13_s7g0b"), ExtResource("26_lkded")])
-
 [node name="IceCream" parent="." unique_id=1547382436 instance=ExtResource("8_15mv3")]
-position = Vector2(844, 288)
+position = Vector2(1194, 271)
 draggable = true
 texture = ExtResource("9_e3sih")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
+[node name="Unicorn" parent="." unique_id=1586559094 instance=ExtResource("8_15mv3")]
+position = Vector2(1444, 299)
+texture = ExtResource("8_e3sih")
+sounds = Array[AudioStream]([ExtResource("9_d5akn"), ExtResource("10_wbtxt"), ExtResource("10_d5akn"), ExtResource("12_x2fux"), ExtResource("13_s7g0b"), ExtResource("26_lkded")])
+
 [node name="Fire" parent="." unique_id=2146614021 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
-position = Vector2(1064, 1032)
+position = Vector2(1058, 874)
 texture = ExtResource("10_2y5yt")
 sounds = Array[AudioStream]([ExtResource("33_ffvxj"), ExtResource("13_wbtxt")])
 
@@ -121,56 +122,85 @@ scale_amount_max = 0.02
 stream = ExtResource("36_0bysi")
 
 [node name="Butterfly" parent="." unique_id=1518474956 instance=ExtResource("8_15mv3")]
-position = Vector2(130, 270)
+position = Vector2(1757, 114)
+rotation = 0.62831855
 texture = ExtResource("11_go7sj")
 
-[node name="Bow" parent="." unique_id=791298815 instance=ExtResource("8_15mv3")]
-position = Vector2(212, 192)
-draggable = true
-interact_with = "Spider"
-texture = ExtResource("12_7gny6")
-sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
-
 [node name="Fart" parent="." unique_id=1435724302 instance=ExtResource("8_15mv3")]
-position = Vector2(1406, 321)
+position = Vector2(1763, 315)
 draggable = true
 texture = ExtResource("13_7gny6")
 sounds = Array[AudioStream]([ExtResource("17_x2fux")])
 
 [node name="Muffin" parent="." unique_id=321348595 instance=ExtResource("8_15mv3")]
-position = Vector2(1677, 452)
+position = Vector2(1088, 433)
 draggable = true
 texture = ExtResource("14_x2xxo")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="Soap" parent="." unique_id=943966003 instance=ExtResource("8_15mv3")]
-position = Vector2(1725, 156)
+position = Vector2(94, 442)
 draggable = true
 texture = ExtResource("15_2cbcq")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="Sparkle" parent="." unique_id=2137941298 instance=ExtResource("8_15mv3")]
-position = Vector2(1265, 186)
+position = Vector2(1551, 64)
 texture = ExtResource("16_isj1j")
 
+[node name="Cloud" parent="." unique_id=76029429 instance=ExtResource("8_15mv3")]
+position = Vector2(416, 161)
+draggable = true
+texture = ExtResource("18_tr1x6")
+sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
+
+[node name="Bow" parent="." unique_id=791298815 instance=ExtResource("8_15mv3")]
+position = Vector2(413, 111)
+draggable = true
+interact_with = "Spider"
+texture = ExtResource("12_7gny6")
+sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
+
 [node name="WaterDrop" parent="." unique_id=1570758714 instance=ExtResource("8_15mv3")]
-position = Vector2(583, 213)
+position = Vector2(461, 269)
 draggable = true
 interact_with = "Fire"
 texture = ExtResource("17_so66j")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
-[node name="Cloud" parent="." unique_id=76029429 instance=ExtResource("8_15mv3")]
-position = Vector2(503, 86)
+[node name="WaterDrop2" parent="." unique_id=1836798639 instance=ExtResource("8_15mv3")]
+position = Vector2(451, 404)
 draggable = true
-texture = ExtResource("18_tr1x6")
+interact_with = "Fire"
+texture = ExtResource("17_so66j")
+sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
+
+[node name="WaterDrop3" parent="." unique_id=1322457601 instance=ExtResource("8_15mv3")]
+position = Vector2(376, 323)
+draggable = true
+interact_with = "Fire"
+texture = ExtResource("17_so66j")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="Clown" parent="." unique_id=757569316 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
 position = Vector2(1638, 813)
 texture = ExtResource("45_jscgt")
 
+[node name="Bubble" parent="." unique_id=287188484 instance=ExtResource("8_15mv3")]
+position = Vector2(141, 380)
+texture = ExtResource("48_awarj")
+
+[node name="Bubble2" parent="." unique_id=644117173 instance=ExtResource("8_15mv3")]
+position = Vector2(131, 283)
+texture = ExtResource("48_awarj")
+
+[node name="Bubble3" parent="." unique_id=596831095 instance=ExtResource("8_15mv3")]
+position = Vector2(55, 328)
+texture = ExtResource("48_awarj")
+
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="end_level" from="Player" to="." method="_on_player_end_level"]
 [connection signal="interaction" from="Bow" to="." method="_on_bow_interaction"]
 [connection signal="interaction" from="WaterDrop" to="." method="_on_water_drop_interaction"]
+[connection signal="interaction" from="WaterDrop2" to="." method="_on_water_drop_interaction"]
+[connection signal="interaction" from="WaterDrop3" to="." method="_on_water_drop_interaction"]

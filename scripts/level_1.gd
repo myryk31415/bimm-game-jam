@@ -16,3 +16,8 @@ func _on_player_end_level() -> void:
 
 func reset():
 	get_tree().change_scene_to_file("res://scenes/" + get_tree().current_scene.name.to_snake_case() + ".tscn")
+
+
+func _on_water_drop_interaction() -> void:
+	remove_child($WaterDrop)
+	remove_child($Fire)

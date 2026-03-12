@@ -158,3 +158,4 @@ texture = ExtResource("18_tr1x6")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [connection signal="end_level" from="Player" to="." method="_on_player_end_level"]
+[connection signal="interaction" from="WaterDrop" to="." method="_on_water_drop_interaction"]

@@ -6,7 +6,7 @@ const CUTE_SPIDER = preload("uid://bnn03bt1lwb0g")
 func _ready() -> void:
 	pass # Replace with function body.
 
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
@@ -18,9 +18,8 @@ func reset():
 
 func _on_water_drop_interaction() -> void:
 	$Fire/AudioStreamPlayer2.play()
-	await $Fire/AudioStreamPlayer2.finished
-	$WaterDrop.queue_free()
-	$Fire.queue_free()
+	$Fire.fade_away()
+	$WaterDrop.fade_away()
 
 
 func _on_bow_interaction() -> void:

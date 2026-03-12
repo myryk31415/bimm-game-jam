@@ -52,10 +52,12 @@ func _process(_delta: float) -> void:
 	if is_grabbed:
 		global_position = get_global_mouse_position()
 
-#func _input(event: InputEvent) -> void:
-	#if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		#if not event.is_pressed():
-			#is_grabbed = false
+
+func fade_away():
+	%AnimationPlayer.play("fade_out")
+	await %AnimationPlayer.animation_finished
+	queue_free()
+
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:

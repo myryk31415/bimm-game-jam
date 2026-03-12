@@ -17,6 +17,8 @@ func reset():
 
 
 func _on_water_drop_interaction() -> void:
+	$Fire/AudioStreamPlayer2.play()
+	await $Fire/AudioStreamPlayer2.finished
 	$WaterDrop.queue_free()
 	$Fire.queue_free()
 

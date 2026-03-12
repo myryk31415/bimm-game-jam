@@ -44,6 +44,7 @@
 [ext_resource type="AudioStream" uid="uid://byajdjerwqmll" path="res://Sounds/mine!.wav" id="30_x3eym"]
 [ext_resource type="AudioStream" uid="uid://dagkxja25b70v" path="res://Sounds/fire_crackling_loop.wav" id="33_ffvxj"]
 [ext_resource type="Texture2D" uid="uid://ct2pvf4bgwyns" path="res://assets/fire-particle.png" id="35_8jqp6"]
+[ext_resource type="AudioStream" uid="uid://dnxqjfc606dys" path="res://Sounds/extinguish_fire.wav" id="36_0bysi"]
 [ext_resource type="Texture2D" uid="uid://c0kpvqert5ksn" path="res://assets/ElinAssets/Clown.png" id="45_jscgt"]
 
 [node name="Level1" type="Node2D" unique_id=444509381]
@@ -111,6 +112,9 @@ initial_velocity_max = 700.0
 angle_max = 360.0
 scale_amount_min = 0.02
 scale_amount_max = 0.02
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Fire" unique_id=15046184]
+stream = ExtResource("36_0bysi")
 
 [node name="Butterfly" parent="." unique_id=1518474956 instance=ExtResource("8_15mv3")]
 position = Vector2(130, 270)

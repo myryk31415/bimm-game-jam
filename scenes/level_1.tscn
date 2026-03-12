@@ -186,6 +186,7 @@ texture = ExtResource("11_go7sj")
 [node name="Fart" parent="." unique_id=1435724302 instance=ExtResource("8_15mv3")]
 position = Vector2(1763, 315)
 draggable = true
+interact_with = Array[String](["Fire"])
 texture = ExtResource("13_7gny6")
 sounds = Array[AudioStream]([ExtResource("17_x2fux")])
 
@@ -290,6 +291,7 @@ texture = ExtResource("56_x3eym")
 [connection signal="end_level" from="Player" to="." method="_on_player_end_level"]
 [connection signal="interaction" from="IceCream" to="." method="_on_ice_cream_interaction"]
 [connection signal="interaction" from="Butterfly" to="." method="_on_butterfly_interaction"]
+[connection signal="interaction" from="Fart" to="." method="_on_fart_interaction"]
 [connection signal="interaction" from="Muffin" to="." method="_on_muffin_interaction"]
 [connection signal="interaction" from="Soap" to="." method="_on_soap_interaction"]
 [connection signal="interaction" from="Bow" to="." method="_on_bow_interaction"]

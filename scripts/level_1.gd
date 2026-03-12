@@ -16,10 +16,10 @@ func reset():
 	get_tree().change_scene_to_file("res://scenes/" + get_tree().current_scene.name.to_snake_case() + ".tscn")
 
 
-func _on_water_drop_interaction() -> void:
+func _on_water_drop_interaction(from: Node2D) -> void:
 	$Fire/AudioStreamPlayer2.play()
 	$Fire.fade_away()
-	$WaterDrop.fade_away()
+	from.fade_away()
 
 
 func _on_bow_interaction() -> void:

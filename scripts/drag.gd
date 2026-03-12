@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-signal interaction
+signal interaction(from: Node2D)
 
 @export var draggable: bool:
 	set(value):
@@ -82,4 +82,4 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == interact_with:
-		interaction.emit()
+		interaction.emit(self)

@@ -170,28 +170,28 @@ sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), E
 [node name="Bow" parent="." unique_id=791298815 instance=ExtResource("8_15mv3")]
 position = Vector2(403, 65)
 draggable = true
-interact_with = "Spider"
+interact_with = Array[String](["Spider"])
 texture = ExtResource("12_7gny6")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="WaterDrop" parent="." unique_id=1570758714 instance=ExtResource("8_15mv3")]
 position = Vector2(451, 223)
 draggable = true
-interact_with = "Fire"
+interact_with = Array[String](["Fire"])
 texture = ExtResource("17_so66j")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="WaterDrop2" parent="." unique_id=1836798639 instance=ExtResource("8_15mv3")]
 position = Vector2(441, 358)
 draggable = true
-interact_with = "Fire"
+interact_with = Array[String](["Fire"])
 texture = ExtResource("17_so66j")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="WaterDrop3" parent="." unique_id=1322457601 instance=ExtResource("8_15mv3")]
 position = Vector2(366, 277)
 draggable = true
-interact_with = "Fire"
+interact_with = Array[String](["Fire"])
 texture = ExtResource("17_so66j")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
@@ -217,6 +217,7 @@ texture = ExtResource("48_awarj")
 [node name="Balloons" parent="." unique_id=900304778 instance=ExtResource("8_15mv3")]
 position = Vector2(762, 286)
 draggable = true
+interact_with = Array[String](["Clown"])
 texture = ExtResource("49_uuj1x")
 
 [node name="Star" parent="." unique_id=996474778 instance=ExtResource("8_15mv3")]

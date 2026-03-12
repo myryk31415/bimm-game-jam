@@ -76,7 +76,7 @@ autoplay = true
 [node name="Player" parent="." unique_id=1278691344 instance=ExtResource("2_rus8k")]
 position = Vector2(108, 820)
 
-[node name="Spider" parent="." unique_id=996746160 instance=ExtResource("8_15mv3")]
+[node name="Spider" parent="." unique_id=996746160 groups=["EndLevel"] instance=ExtResource("8_15mv3")]
 position = Vector2(640, 904)
 texture = ExtResource("7_pa8r4")
 sounds = Array[AudioStream]([ExtResource("8_2cbcq"), ExtResource("9_bamb7"), ExtResource("10_8jqp6"), ExtResource("11_jscgt"), ExtResource("12_0bysi"), ExtResource("8_tr1x6"), ExtResource("14_y0ove"), ExtResource("15_awarj"), ExtResource("16_uuj1x"), ExtResource("17_3x5jj"), ExtResource("18_75ls7"), ExtResource("19_gwsl1")])
@@ -92,7 +92,7 @@ draggable = true
 texture = ExtResource("9_e3sih")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
-[node name="Fire" parent="." unique_id=2146614021 instance=ExtResource("8_15mv3")]
+[node name="Fire" parent="." unique_id=2146614021 groups=["EndLevel"] instance=ExtResource("8_15mv3")]
 position = Vector2(1064, 1032)
 texture = ExtResource("10_2y5yt")
 sounds = Array[AudioStream]([ExtResource("33_ffvxj"), ExtResource("13_wbtxt")])

@@ -58,7 +58,14 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Main Menu"
 
+[node name="Retry" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=487802311]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Retry"
+
 [node name="GameOverSound" type="AudioStreamPlayer" parent="." unique_id=2050349719]
 autoplay = true
 
 [connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Retry" to="." method="_on_retry_pressed"]

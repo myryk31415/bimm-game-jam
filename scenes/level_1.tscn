@@ -59,18 +59,6 @@
 [node name="Level1" type="Node2D" unique_id=444509381]
 script = ExtResource("1_rus8k")
 
-[node name="Background" type="CanvasLayer" parent="." unique_id=1147377621]
-layer = -1
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="Background" unique_id=164672432]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0.15686275, 1, 1)
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1179163203]
 position = Vector2(959.2, 539)
 texture = ExtResource("2_pa8r4")
@@ -126,8 +114,14 @@ scale_amount_max = 0.02
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Fire" unique_id=15046184]
 stream = ExtResource("36_0bysi")
 
+[node name="Shoe" parent="." unique_id=240120927 instance=ExtResource("8_15mv3")]
+position = Vector2(1562, 994)
+draggable = true
+interact_with = Array[String](["cute_spider"])
+texture = ExtResource("51_75ls7")
+sounds = Array[AudioStream]([ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("52_qb2q0"), ExtResource("53_x3eym"), ExtResource("54_ffvxj"), ExtResource("55_yfehg"), ExtResource("16_wbtxt")])
+
 [node name="Player" parent="." unique_id=1278691344 instance=ExtResource("2_rus8k")]
-z_index = 1
 position = Vector2(108, 820)
 
 [node name="IceCream" parent="." unique_id=1547382436 instance=ExtResource("8_15mv3")]
@@ -240,13 +234,7 @@ draggable = true
 interact_with = Array[String](["Fire"])
 texture = ExtResource("50_3x5jj")
 
-[node name="Shoe" parent="." unique_id=240120927 instance=ExtResource("8_15mv3")]
-position = Vector2(1562, 994)
-draggable = true
-interact_with = Array[String](["cute_spider"])
-texture = ExtResource("51_75ls7")
-sounds = Array[AudioStream]([ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("52_qb2q0"), ExtResource("53_x3eym"), ExtResource("54_ffvxj"), ExtResource("55_yfehg"), ExtResource("16_wbtxt")])
-
+[connection signal="interaction" from="Shoe" to="." method="_on_shoe_interaction"]
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="end_level" from="Player" to="." method="_on_player_end_level"]
 [connection signal="interaction" from="IceCream" to="." method="_on_ice_cream_interaction"]
@@ -259,4 +247,3 @@ sounds = Array[AudioStream]([ExtResource("29_qb2q0"), ExtResource("30_x3eym"), E
 [connection signal="interaction" from="WaterDrop3" to="." method="_on_water_drop_interaction"]
 [connection signal="interaction" from="Balloons" to="." method="_on_balloons_interaction"]
 [connection signal="interaction" from="Star" to="." method="_on_star_interaction"]
-[connection signal="interaction" from="Shoe" to="." method="_on_shoe_interaction"]

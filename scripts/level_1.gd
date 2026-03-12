@@ -114,6 +114,7 @@ func _on_balloons_interaction(from: Node2D, with: Node2D) -> void:
 	ClownBalloon.name = "ClownBalloon"
 	ClownBalloon.global_position = with.global_position
 	add_child(ClownBalloon)
+	move_child(ClownBalloon, 1)
 	from.queue_free()
 	with.queue_free()
 
@@ -123,6 +124,7 @@ func _on_soap_interaction(from: Node2D, with: Node2D) -> void:
 	var ClownNoScary = make_item("res://assets/ElinAssets/ClownNoScary.png", false, [], [], false)
 	ClownNoScary.global_position = with.global_position
 	add_child(ClownNoScary)
+	move_child(ClownNoScary, 1)
 	from.queue_free()
 	with.queue_free()
 
@@ -133,5 +135,6 @@ func _on_shoe_interaction(from: Node2D, with: Node2D) -> void:
 	var CuteSpiderMush = make_item("res://assets/ElinAssets/CuteSpiderMush.png")
 	CuteSpiderMush.global_position = with.global_position
 	add_child(CuteSpiderMush)
+	move_child(CuteSpiderMush, 1)
 	from.queue_free()
 	with.queue_free()

@@ -40,10 +40,17 @@
 [ext_resource type="AudioStream" uid="uid://dv0lblaup1as4" path="res://Sounds/spider_loop_4.wav" id="19_gwsl1"]
 [ext_resource type="AudioStream" uid="uid://dpgmpd32wsas" path="res://Sounds/cute_spider_mommy_2.wav" id="20_y0ove"]
 [ext_resource type="AudioStream" uid="uid://cuvukxhj5ua0i" path="res://Sounds/horse_combined.wav" id="26_lkded"]
+[ext_resource type="Texture2D" uid="uid://ci61urtcjxd8m" path="res://assets/UnicornLickFrames/UnicornLick1.png" id="27_lvvyj"]
 [ext_resource type="AudioStream" uid="uid://dhnlt6wtaiwkw" path="res://Sounds/GIVE THAT BACK.wav" id="28_ensge"]
+[ext_resource type="Texture2D" uid="uid://cp8kally1mbct" path="res://assets/UnicornLickFrames/UnicornLick2.png" id="28_iwav6"]
+[ext_resource type="Texture2D" uid="uid://cgcnt3fcr2ony" path="res://assets/UnicornLickFrames/UnicornLick3.png" id="29_n50md"]
 [ext_resource type="AudioStream" uid="uid://c7au6q0dr3n0x" path="res://Sounds/less of that.wav" id="29_qb2q0"]
+[ext_resource type="Texture2D" uid="uid://dtfp0cmf071qn" path="res://assets/UnicornLickFrames/UnicornLick4.png" id="30_mteb0"]
 [ext_resource type="AudioStream" uid="uid://byajdjerwqmll" path="res://Sounds/mine!.wav" id="30_x3eym"]
+[ext_resource type="Texture2D" uid="uid://cp2si60aews0f" path="res://assets/UnicornLickFrames/UnicornLick5.png" id="31_7dh7s"]
+[ext_resource type="Texture2D" uid="uid://cl3ac18a10na" path="res://assets/UnicornLickFrames/UnicornLick6.png" id="32_ymcg8"]
 [ext_resource type="AudioStream" uid="uid://dagkxja25b70v" path="res://Sounds/fire_crackling_loop.wav" id="33_ffvxj"]
+[ext_resource type="Texture2D" uid="uid://dbh5lsvrfjufy" path="res://assets/UnicornLickFrames/UnicornLick7.png" id="33_gdkps"]
 [ext_resource type="Texture2D" uid="uid://ct2pvf4bgwyns" path="res://assets/fire-particle.png" id="35_8jqp6"]
 [ext_resource type="AudioStream" uid="uid://dnxqjfc606dys" path="res://Sounds/extinguish_fire.wav" id="36_0bysi"]
 [ext_resource type="Texture2D" uid="uid://dfafmuefstanq" path="res://assets/ElinAssets/Clown.png" id="45_jscgt"]
@@ -56,6 +63,38 @@
 [ext_resource type="AudioStream" uid="uid://bhjcl8phx3el2" path="res://Sounds/please don't.wav" id="54_ffvxj"]
 [ext_resource type="AudioStream" uid="uid://wj25avn0u8g0" path="res://Sounds/stop_that_uahh.wav" id="55_yfehg"]
 [ext_resource type="Texture2D" uid="uid://v454ochafucc" path="res://assets/ElinAssets/FearGame_Rainbow.png" id="56_x3eym"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fgw8e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_lvvyj")
+}, {
+"duration": 25.0,
+"texture": ExtResource("33_gdkps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_iwav6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_n50md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_mteb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_7dh7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_ymcg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_gdkps")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Level1" type="Node2D" unique_id=444509381]
 script = ExtResource("1_rus8k")
@@ -86,6 +125,11 @@ stream = ExtResource("20_y0ove")
 position = Vector2(1444, 299)
 texture = ExtResource("8_e3sih")
 sounds = Array[AudioStream]([ExtResource("9_d5akn"), ExtResource("10_wbtxt"), ExtResource("10_d5akn"), ExtResource("12_x2fux"), ExtResource("13_s7g0b"), ExtResource("26_lkded")])
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Unicorn" unique_id=524812239]
+sprite_frames = SubResource("SpriteFrames_fgw8e")
+autoplay = "default"
+frame_progress = 0.8444337
 
 [node name="Clown" parent="." unique_id=757569316 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
 position = Vector2(1638, 813)

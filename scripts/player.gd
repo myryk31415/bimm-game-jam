@@ -69,7 +69,7 @@ func die():
 func end():
 	if not game_ended:
 		game_ended = true
-		end_level.emit
+		end_level.emit()
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "flip":

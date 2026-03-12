@@ -75,6 +75,7 @@ func _physics_process(delta: float) -> void:
 
 func die():
 	if not game_ended:
+		%AnimationPlayer.play(\"death\")
 		game_ended = true
 		emit_signal(\"end_level\")
 
@@ -208,8 +209,8 @@ shape = SubResource("CapsuleShape2D_d2wvv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=550679368]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_ur7pv")
-animation = &"death"
-frame_progress = 0.99698025
+animation = &"idle"
+autoplay = "idle"
 
 [node name="walking_sound" type="AudioStreamPlayer" parent="." unique_id=716373013]
 stream = ExtResource("2_g2els")

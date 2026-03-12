@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bnn03bt1lwb0g"]
+
+[ext_resource type="PackedScene" uid="uid://dkfhmnuke066g" path="res://scenes/drag.tscn" id="1_nljv0"]
+[ext_resource type="Texture2D" uid="uid://cmklbkpu5nyj6" path="res://assets/ElinAssets/CuteSpider.png" id="2_deo7d"]
+
+[node name="CuteSpider" type="Node2D" unique_id=1989199620]
+
+[node name="drag" parent="." unique_id=1586559094 instance=ExtResource("1_nljv0")]
+texture = ExtResource("2_deo7d")

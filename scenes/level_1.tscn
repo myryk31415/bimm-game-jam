@@ -163,4 +163,5 @@ position = Vector2(1638, 813)
 texture = ExtResource("45_jscgt")
 
 [connection signal="end_level" from="Player" to="." method="_on_player_end_level"]
+[connection signal="interaction" from="Bow" to="." method="_on_bow_interaction"]
 [connection signal="interaction" from="WaterDrop" to="." method="_on_water_drop_interaction"]

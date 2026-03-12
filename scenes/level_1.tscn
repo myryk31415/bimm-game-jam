@@ -93,6 +93,7 @@ stream = ExtResource("20_y0ove")
 [node name="IceCream" parent="." unique_id=1547382436 instance=ExtResource("8_15mv3")]
 position = Vector2(1194, 271)
 draggable = true
+interact_with = Array[String](["Clown", "Spider"])
 texture = ExtResource("9_e3sih")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
@@ -126,6 +127,8 @@ stream = ExtResource("36_0bysi")
 [node name="Butterfly" parent="." unique_id=1518474956 instance=ExtResource("8_15mv3")]
 position = Vector2(1757, 114)
 rotation = 0.62831855
+draggable = true
+interact_with = Array[String](["Fire"])
 texture = ExtResource("11_go7sj")
 
 [node name="Fart" parent="." unique_id=1435724302 instance=ExtResource("8_15mv3")]
@@ -137,12 +140,14 @@ sounds = Array[AudioStream]([ExtResource("17_x2fux")])
 [node name="Muffin" parent="." unique_id=321348595 instance=ExtResource("8_15mv3")]
 position = Vector2(1088, 433)
 draggable = true
+interact_with = Array[String](["Fire"])
 texture = ExtResource("14_x2xxo")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="Soap" parent="." unique_id=943966003 instance=ExtResource("8_15mv3")]
 position = Vector2(94, 442)
 draggable = true
+interact_with = Array[String](["Clown"])
 texture = ExtResource("15_2cbcq")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
@@ -170,7 +175,7 @@ sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), E
 [node name="Bow" parent="." unique_id=791298815 instance=ExtResource("8_15mv3")]
 position = Vector2(403, 65)
 draggable = true
-interact_with = Array[String](["Spider"])
+interact_with = Array[String](["Spider", "Fire"])
 texture = ExtResource("12_7gny6")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
@@ -223,11 +228,19 @@ texture = ExtResource("49_uuj1x")
 
 [node name="Star" parent="." unique_id=996474778 instance=ExtResource("8_15mv3")]
 position = Vector2(1552, 85)
+draggable = true
+interact_with = Array[String](["Fire"])
 texture = ExtResource("50_3x5jj")
 
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="end_level" from="Player" to="." method="_on_player_end_level"]
+[connection signal="interaction" from="IceCream" to="." method="_on_ice_cream_interaction"]
+[connection signal="interaction" from="Butterfly" to="." method="_on_butterfly_interaction"]
+[connection signal="interaction" from="Muffin" to="." method="_on_muffin_interaction"]
+[connection signal="interaction" from="Soap" to="." method="_on_soap_interaction"]
 [connection signal="interaction" from="Bow" to="." method="_on_bow_interaction"]
 [connection signal="interaction" from="WaterDrop" to="." method="_on_water_drop_interaction"]
 [connection signal="interaction" from="WaterDrop2" to="." method="_on_water_drop_interaction"]
 [connection signal="interaction" from="WaterDrop3" to="." method="_on_water_drop_interaction"]
+[connection signal="interaction" from="Balloons" to="." method="_on_balloons_interaction"]
+[connection signal="interaction" from="Star" to="." method="_on_star_interaction"]

@@ -108,6 +108,7 @@ func _on_star_interaction(from: Node2D, with: Node2D) -> void:
 func _on_balloons_interaction(from: Node2D, with: Node2D) -> void:
 	$Balloons/AudioStreamPlayer.stop()
 	var ClownBalloon = make_item("res://assets/ElinAssets/ClownBalloon.png")
+	ClownBalloon.name = "ClownBalloon"
 	ClownBalloon.global_position = with.global_position
 	add_child(ClownBalloon)
 	from.queue_free()

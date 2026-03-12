@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-signal interaction(from: Node2D)
+signal interaction(from: Node2D, with: Node2D)
 
 @export var draggable: bool:
 	set(value):
@@ -10,7 +10,7 @@ signal interaction(from: Node2D)
 		else:
 			set_collision_layer_value(1, true)
 
-@export var interact_with: String
+@export var interact_with: Array[String]
 
 @export var texture: Texture2D:
 	set(value):
@@ -81,5 +81,5 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == interact_with:
-		interaction.emit(self)
+	if interact_with.has(body.name):
+		interaction.emit(self, body)

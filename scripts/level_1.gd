@@ -17,13 +17,13 @@ func reset():
 	get_tree().change_scene_to_file("res://scenes/" + get_tree().current_scene.name.to_snake_case() + ".tscn")
 
 
-func _on_water_drop_interaction(from: Node2D) -> void:
+func _on_water_drop_interaction(from: Node2D, _with: Node2D) -> void:
 	$Fire/AudioStreamPlayer2.play()
 	$Fire.fade_away()
 	from.fade_away()
 
 
-func _on_bow_interaction(form: Node2D) -> void:
+func _on_bow_interaction(from: Node2D, _with: Node2D) -> void:
 	$Bow/AudioStreamPlayer.stop()
 	$Spider/AudioStreamPlayer2.play()
 	
@@ -52,7 +52,7 @@ func _on_player_end_level() -> void:
 func make_item(
 	texture_path: String,
 	draggable: bool = false,
-	interact_with: String = "",
+	interact_with: Array[String] = [],
 	sounds: Array[AudioStream] = [],
 	) -> Node2D:
 	var texture = load(texture_path)

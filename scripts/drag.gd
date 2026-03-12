@@ -74,11 +74,14 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 					%AudioStreamPlayer.stream = sounds.pick_random()
 					%AudioStreamPlayer.play()
 				if event.is_pressed() and draggable:
+					set_collision_layer_value(1, false)
 					is_grabbed = true
 					scale = Vector2(1.2, 1.2)
 				else:
 					is_grabbed = false
 					scale = Vector2(1, 1)
+					if self.name == "Rainbow":
+						set_collision_layer_value(1, true)
 			MOUSE_BUTTON_WHEEL_UP:
 				if is_grabbed:
 					rotate(0.1)

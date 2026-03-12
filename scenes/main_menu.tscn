@@ -44,7 +44,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 75
-text = "Cool Game :D"
+text = "A hellvenly Match"
 horizontal_alignment = 1
 
 [node name="Start" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1454882384 instance=ExtResource("2_ekxnf")]

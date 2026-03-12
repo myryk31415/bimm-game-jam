@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bg5tsici80b54"]
 
 [ext_resource type="Script" uid="uid://d1c1x410mju2t" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="PackedScene" uid="uid://dmx6dhbik3uim" path="res://scenes/cloud_button.tscn" id="2_ekxnf"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1098373884]
 script = ExtResource("1_l6cm7")
@@ -46,34 +47,16 @@ theme_override_font_sizes/font_size = 75
 text = "Cool Game :D"
 horizontal_alignment = 1
 
-[node name="Start" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=744270468]
-custom_minimum_size = Vector2(0, 80)
+[node name="Start" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1454882384 instance=ExtResource("2_ekxnf")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../Quit")
-focus_neighbor_bottom = NodePath("../Quit")
-focus_next = NodePath("../Quit")
-focus_previous = NodePath("../Quit")
-theme_override_font_sizes/font_size = 30
 text = "Start"
 
-[node name="How to play" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1537360870]
-custom_minimum_size = Vector2(0, 80)
+[node name="How to play" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1232915532 instance=ExtResource("2_ekxnf")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../Quit")
-focus_neighbor_bottom = NodePath("../Quit")
-focus_next = NodePath("../Quit")
-focus_previous = NodePath("../Quit")
-theme_override_font_sizes/font_size = 30
 text = "How to play"
 
-[node name="Quit" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=61546512]
-custom_minimum_size = Vector2(0, 80)
+[node name="Quit" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=894932201 instance=ExtResource("2_ekxnf")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../Start")
-focus_neighbor_bottom = NodePath("../Start")
-focus_next = NodePath("../Start")
-focus_previous = NodePath("../Start")
-theme_override_font_sizes/font_size = 30
 text = "Quit"
 
 [node name="ArtWork" type="ColorRect" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=692391659]

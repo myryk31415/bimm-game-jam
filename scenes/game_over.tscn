@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cu55c4a3r34ce"]
 
 [ext_resource type="Script" uid="uid://bg06ne24erced" path="res://scripts/game_over.gd" id="1_xeevv"]
+[ext_resource type="PackedScene" uid="uid://dmx6dhbik3uim" path="res://scenes/cloud_button.tscn" id="2_wqhvx"]
 
 [node name="GameOver" type="CanvasLayer" unique_id=1098373884]
 script = ExtResource("1_xeevv")
@@ -52,16 +53,12 @@ text = "GAME
 OVER"
 horizontal_alignment = 1
 
-[node name="MainMenu" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=91527482]
-custom_minimum_size = Vector2(0, 80)
+[node name="MainMenu" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=894932201 instance=ExtResource("2_wqhvx")]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
 text = "Main Menu"
 
-[node name="Retry" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=487802311]
-custom_minimum_size = Vector2(0, 80)
+[node name="Retry" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1616715936 instance=ExtResource("2_wqhvx")]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
 text = "Retry"
 
 [node name="GameOverSound" type="AudioStreamPlayer" parent="." unique_id=2050349719]

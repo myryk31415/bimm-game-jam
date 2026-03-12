@@ -201,7 +201,6 @@ texture = ExtResource("17_so66j")
 sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="Clown" parent="." unique_id=757569316 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
-visible = false
 position = Vector2(1638, 813)
 texture = ExtResource("45_jscgt")
 

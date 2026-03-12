@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dhulc2lnxvxl3"]
+
+[ext_resource type="Script" uid="uid://cwnoen813wf6h" path="res://scripts/cut_scene.gd" id="1_ydlee"]
+[ext_resource type="Texture2D" uid="uid://dei4dm3e8vw2p" path="res://assets/feargameChar_Outro/feargameChar_Outro_Frame1.png" id="2_ya6b3"]
+[ext_resource type="Texture2D" uid="uid://o0b0dawqcy1m" path="res://assets/feargameChar_Outro/feargameChar_Outro_Frame2.png" id="3_611wi"]
+[ext_resource type="Texture2D" uid="uid://c5a4coeki3gx4" path="res://assets/feargameChar_Outro/feargameChar_Outro_Frame3.png" id="4_0b11s"]
+[ext_resource type="Texture2D" uid="uid://b3tny7kus00k1" path="res://assets/feargameChar_Outro/feargameChar_Outro_Frame4.png" id="5_7nwcv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ascsr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ya6b3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_611wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0b11s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7nwcv")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="outro" type="Node2D" unique_id=1874165172]
+script = ExtResource("1_ydlee")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=666121175]
+unique_name_in_owner = true
+position = Vector2(966, 546)
+sprite_frames = SubResource("SpriteFrames_ascsr")

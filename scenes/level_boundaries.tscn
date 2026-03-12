@@ -8,6 +8,8 @@ normal = Vector2(-1, 0)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u3vv1"]
 normal = Vector2(1, 0)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3vv1"]
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c41w6"]
 
 [node name="Level Boundaries" type="StaticBody2D" unique_id=1215968374]
@@ -21,6 +23,16 @@ shape = SubResource("WorldBoundaryShape2D_siidf")
 unique_name_in_owner = true
 shape = SubResource("WorldBoundaryShape2D_u3vv1")
 
-[node name="Floor" type="CollisionShape2D" parent="." unique_id=596808966]
+[node name="FloorLeft" type="CollisionShape2D" parent="." unique_id=2094421109]
 position = Vector2(0, 1080)
+scale = Vector2(87, 1)
+shape = SubResource("RectangleShape2D_u3vv1")
+
+[node name="FloorRight" type="CollisionShape2D" parent="." unique_id=860590535]
+position = Vector2(1920, 1080)
+scale = Vector2(68, 1)
+shape = SubResource("RectangleShape2D_u3vv1")
+
+[node name="FloorKill" type="CollisionShape2D" parent="." unique_id=596808966]
+position = Vector2(0, 2160)
 shape = SubResource("WorldBoundaryShape2D_c41w6")

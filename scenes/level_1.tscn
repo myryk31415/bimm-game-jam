@@ -243,6 +243,7 @@ texture = ExtResource("50_3x5jj")
 [node name="Shoe" parent="." unique_id=240120927 instance=ExtResource("8_15mv3")]
 position = Vector2(1562, 994)
 draggable = true
+interact_with = Array[String](["cute_spider"])
 texture = ExtResource("51_75ls7")
 sounds = Array[AudioStream]([ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("52_qb2q0"), ExtResource("53_x3eym"), ExtResource("54_ffvxj"), ExtResource("55_yfehg"), ExtResource("16_wbtxt")])
 
@@ -258,3 +259,4 @@ sounds = Array[AudioStream]([ExtResource("29_qb2q0"), ExtResource("30_x3eym"), E
 [connection signal="interaction" from="WaterDrop3" to="." method="_on_water_drop_interaction"]
 [connection signal="interaction" from="Balloons" to="." method="_on_balloons_interaction"]
 [connection signal="interaction" from="Star" to="." method="_on_star_interaction"]
+[connection signal="interaction" from="Shoe" to="." method="_on_shoe_interaction"]

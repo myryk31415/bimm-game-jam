@@ -38,6 +38,7 @@
 [ext_resource type="AudioStream" uid="uid://dv4d6etj6eaxs" path="res://Sounds/spider_loop_3.wav" id="18_75ls7"]
 [ext_resource type="Texture2D" uid="uid://b1h5rfnbatl46" path="res://assets/ElinAssets/Cloud.png" id="18_tr1x6"]
 [ext_resource type="AudioStream" uid="uid://dv0lblaup1as4" path="res://Sounds/spider_loop_4.wav" id="19_gwsl1"]
+[ext_resource type="AudioStream" uid="uid://dpgmpd32wsas" path="res://Sounds/cute_spider_mommy_2.wav" id="20_y0ove"]
 [ext_resource type="AudioStream" uid="uid://cuvukxhj5ua0i" path="res://Sounds/horse_combined.wav" id="26_lkded"]
 [ext_resource type="AudioStream" uid="uid://dhnlt6wtaiwkw" path="res://Sounds/GIVE THAT BACK.wav" id="28_ensge"]
 [ext_resource type="AudioStream" uid="uid://c7au6q0dr3n0x" path="res://Sounds/less of that.wav" id="29_qb2q0"]
@@ -82,6 +83,9 @@ position = Vector2(108, 820)
 position = Vector2(640, 904)
 texture = ExtResource("7_pa8r4")
 sounds = Array[AudioStream]([ExtResource("8_2cbcq"), ExtResource("9_bamb7"), ExtResource("10_8jqp6"), ExtResource("11_jscgt"), ExtResource("12_0bysi"), ExtResource("8_tr1x6"), ExtResource("14_y0ove"), ExtResource("15_awarj"), ExtResource("16_uuj1x"), ExtResource("17_3x5jj"), ExtResource("18_75ls7"), ExtResource("19_gwsl1")])
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Spider" unique_id=310599104]
+stream = ExtResource("20_y0ove")
 
 [node name="Unicorn" parent="." unique_id=1586559094 instance=ExtResource("8_15mv3")]
 position = Vector2(1091, 328)

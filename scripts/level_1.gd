@@ -23,11 +23,18 @@ func _on_water_drop_interaction() -> void:
 
 
 func _on_bow_interaction() -> void:
+	$Bow/AudioStreamPlayer.stop()
+	$Spider/AudioStreamPlayer2.play()
+	
 	var cute_spider = CUTE_SPIDER.instantiate()
 	cute_spider.global_position = $Spider.global_position + Vector2(0, 50)
 	add_child(cute_spider)
-	$Spider.queue_free()
+	
+	$Spider.hide()
+	$Bow.hide()
+	await $Spider/AudioStreamPlayer2.finished
 	$Bow.queue_free()
+	$Spider.queue_free()
 
 
 func _on_player_died() -> void:

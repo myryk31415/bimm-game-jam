@@ -84,11 +84,9 @@ end = 1920
 stream = ExtResource("4_5xbjy")
 autoplay = true
 
-[node name="Player" parent="." unique_id=1278691344 instance=ExtResource("2_rus8k")]
-position = Vector2(108, 820)
-
 [node name="Spider" parent="." unique_id=996746160 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
 position = Vector2(640, 904)
+collidable = true
 texture = ExtResource("7_pa8r4")
 sounds = Array[AudioStream]([ExtResource("8_2cbcq"), ExtResource("9_bamb7"), ExtResource("10_8jqp6"), ExtResource("11_jscgt"), ExtResource("12_0bysi"), ExtResource("8_tr1x6"), ExtResource("14_y0ove"), ExtResource("15_awarj"), ExtResource("16_uuj1x"), ExtResource("17_3x5jj"), ExtResource("18_75ls7"), ExtResource("19_gwsl1")])
 
@@ -102,10 +100,12 @@ sounds = Array[AudioStream]([ExtResource("9_d5akn"), ExtResource("10_wbtxt"), Ex
 
 [node name="Clown" parent="." unique_id=757569316 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
 position = Vector2(1638, 813)
+collidable = true
 texture = ExtResource("45_jscgt")
 
 [node name="Fire" parent="." unique_id=2146614021 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
 position = Vector2(1058, 874)
+collidable = true
 texture = ExtResource("10_2y5yt")
 sounds = Array[AudioStream]([ExtResource("33_ffvxj"), ExtResource("13_wbtxt")])
 
@@ -125,6 +125,10 @@ scale_amount_max = 0.02
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Fire" unique_id=15046184]
 stream = ExtResource("36_0bysi")
+
+[node name="Player" parent="." unique_id=1278691344 instance=ExtResource("2_rus8k")]
+z_index = 1
+position = Vector2(108, 820)
 
 [node name="IceCream" parent="." unique_id=1547382436 instance=ExtResource("8_15mv3")]
 position = Vector2(1194, 271)

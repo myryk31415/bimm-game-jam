@@ -24,9 +24,9 @@ func _on_water_drop_interaction(from: Node2D, _with: Node2D) -> void:
 	from.fade_away()
 
 
-func _on_bow_interaction(from: Node2D, _with: Node2D) -> void:
+func _on_bow_interaction(from: Node2D, with: Node2D) -> void:
 	$Bow/AudioStreamPlayer.stop()
-	if _with == $Spider and not bow_used:
+	if with == $Spider and not bow_used:
 		bow_used = true
 		$Spider/AudioStreamPlayer2.play()
 		
@@ -43,7 +43,7 @@ func _on_bow_interaction(from: Node2D, _with: Node2D) -> void:
 		await $Spider/AudioStreamPlayer2.finished
 		$Bow.queue_free()
 		$Spider.queue_free()
-	if _with == $Fire and not bow_used:
+	if with == $Fire and not bow_used:
 		bow_used = true
 		var BurntBow = make_item("res://assets/ElinAssets/BowBurned.png",true)
 		BurntBow.global_position = from.global_position
@@ -63,11 +63,13 @@ func make_item(
 	draggable: bool = false,
 	interact_with: Array[String] = [],
 	sounds: Array[AudioStream] = [],
+	collidable: bool = true,
 	) -> Node2D:
 	var texture = load(texture_path)
 	var item = DRAG.instantiate()
 	item.texture = texture
 	item.draggable = draggable
+	item.collidable = collidable
 	item.interact_with = interact_with
 	item.sounds = sounds
 	return item
@@ -118,7 +120,7 @@ func _on_balloons_interaction(from: Node2D, with: Node2D) -> void:
 
 func _on_soap_interaction(from: Node2D, with: Node2D) -> void:
 	$Soap/AudioStreamPlayer.stop()
-	var ClownNoScary = make_item("res://assets/ElinAssets/ClownNoScary.png")
+	var ClownNoScary = make_item("res://assets/ElinAssets/ClownNoScary.png", false, [], [], false)
 	ClownNoScary.global_position = with.global_position
 	add_child(ClownNoScary)
 	$Shoe.move_to_front()

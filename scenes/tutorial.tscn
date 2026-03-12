@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dyn3xxxug5sci"]
 
 [ext_resource type="Script" uid="uid://bbsqghkgqfnx8" path="res://scripts/tutorial.gd" id="1_8ho6b"]
-[ext_resource type="PackedScene" path="res://scenes/cloud_button.tscn" id="2_8ho6b"]
+[ext_resource type="PackedScene" uid="uid://dmx6dhbik3uim" path="res://scenes/cloud_button.tscn" id="2_8ho6b"]
 
 [node name="Tutorial" type="CanvasLayer" unique_id=1098373884]
 script = ExtResource("1_8ho6b")

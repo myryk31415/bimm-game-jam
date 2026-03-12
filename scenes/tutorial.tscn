@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dyn3xxxug5sci"]
 
 [ext_resource type="Script" uid="uid://bbsqghkgqfnx8" path="res://scripts/tutorial.gd" id="1_8ho6b"]
+[ext_resource type="PackedScene" uid="uid://dmx6dhbik3uim" path="res://scenes/cloud_button.tscn" id="2_8ho6b"]
 
 [node name="Tutorial" type="CanvasLayer" unique_id=1098373884]
 script = ExtResource("1_8ho6b")
@@ -16,7 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.21176471, 0.078431375, 1, 0)
+color = Color(0.14509805, 0.21176471, 0.5294118, 0.8980392)
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=178211008]
 layout_mode = 1
@@ -55,10 +56,8 @@ and music!
 "
 horizontal_alignment = 1
 
-[node name="Back" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=61546512]
-custom_minimum_size = Vector2(0, 80)
+[node name="Back" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=894932201 instance=ExtResource("2_8ho6b")]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
 text = "Back"
 
 [node name="ArtWork" type="ColorRect" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=692391659]

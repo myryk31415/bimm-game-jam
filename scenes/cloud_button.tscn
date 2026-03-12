@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dmx6dhbik3uim"]
+
+[ext_resource type="Script" uid="uid://rukgqcky3bxq" path="res://cloud_button.gd" id="1_phmo6"]
+[ext_resource type="Texture2D" uid="uid://b1h5rfnbatl46" path="res://assets/ElinAssets/Cloud.png" id="1_udvqj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q3ryb"]
+texture = ExtResource("1_udvqj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_udvqj"]
+texture = ExtResource("1_udvqj")
+modulate_color = Color(0.62352943, 0.627451, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_46gqr"]
+texture = ExtResource("1_udvqj")
+modulate_color = Color(0.6216297, 0.6266837, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mrwuv"]
+texture = ExtResource("1_udvqj")
+modulate_color = Color(0.62352943, 0.627451, 1, 1)
+
+[node name="CloudButton" type="Button" unique_id=894932201]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_q3ryb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_udvqj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_46gqr")
+theme_override_styles/focus = SubResource("StyleBoxTexture_mrwuv")
+text = "fdsfdfasf"
+script = ExtResource("1_phmo6")

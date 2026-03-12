@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var walking_sound = $walking_sound
 
 signal end_level
+signal died
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -50,18 +51,25 @@ func _physics_process(delta: float) -> void:
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		if collider is Node:
-			if collider.is_in_group("EndLevel"):
+			if collider.is_in_group("KillPlayer"):
 				die()
 		var collider_shape = collision.get_collider_shape()
 		if collider_shape is Node:
-			if collider_shape.is_in_group("EndLevel"):
+			if collider_shape.is_in_group("KillPlayer"):
 				die()
+			elif collider_shape.is_in_group("EndLevel"):
+				end()
 
 func die():
 	if not game_ended:
 		%AnimationPlayer.play("death")
 		game_ended = true
-		emit_signal("end_level")
+		died.emit()
+
+func end():
+	if not game_ended:
+		game_ended = true
+		end_level.emit
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "flip":

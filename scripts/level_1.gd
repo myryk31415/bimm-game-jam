@@ -8,12 +8,9 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
-
-func _on_player_end_level() -> void:
-	reset()
 
 func reset():
 	get_tree().change_scene_to_file("res://scenes/" + get_tree().current_scene.name.to_snake_case() + ".tscn")
@@ -30,3 +27,11 @@ func _on_bow_interaction() -> void:
 	add_child(cute_spider)
 	$Spider.queue_free()
 	$Bow.queue_free()
+
+
+func _on_player_died() -> void:
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+
+
+func _on_player_end_level() -> void:
+	reset()

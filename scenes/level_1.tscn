@@ -46,10 +46,15 @@
 [ext_resource type="AudioStream" uid="uid://dagkxja25b70v" path="res://Sounds/fire_crackling_loop.wav" id="33_ffvxj"]
 [ext_resource type="Texture2D" uid="uid://ct2pvf4bgwyns" path="res://assets/fire-particle.png" id="35_8jqp6"]
 [ext_resource type="AudioStream" uid="uid://dnxqjfc606dys" path="res://Sounds/extinguish_fire.wav" id="36_0bysi"]
-[ext_resource type="Texture2D" uid="uid://c0kpvqert5ksn" path="res://assets/ElinAssets/Clown.png" id="45_jscgt"]
+[ext_resource type="Texture2D" uid="uid://dfafmuefstanq" path="res://assets/ElinAssets/Clown.png" id="45_jscgt"]
 [ext_resource type="Texture2D" uid="uid://dvfwfa5pkg7px" path="res://assets/ElinAssets/Bubble.png" id="48_awarj"]
 [ext_resource type="Texture2D" uid="uid://b44f53oeqi8ps" path="res://assets/ElinAssets/FearGame_Balloons.png" id="49_uuj1x"]
 [ext_resource type="Texture2D" uid="uid://bl0u0i5bsifay" path="res://assets/ElinAssets/Star.png" id="50_3x5jj"]
+[ext_resource type="Texture2D" uid="uid://cbbr4sbgjyamu" path="res://assets/ElinAssets/ClownShoe.png" id="51_75ls7"]
+[ext_resource type="AudioStream" uid="uid://c1g5tnyxougar" path="res://Sounds/oh no .wav" id="52_qb2q0"]
+[ext_resource type="AudioStream" uid="uid://c0v48x1g81qpf" path="res://Sounds/Oh no, no um.wav" id="53_x3eym"]
+[ext_resource type="AudioStream" uid="uid://bhjcl8phx3el2" path="res://Sounds/please don't.wav" id="54_ffvxj"]
+[ext_resource type="AudioStream" uid="uid://wj25avn0u8g0" path="res://Sounds/stop_that_uahh.wav" id="55_yfehg"]
 
 [node name="Level1" type="Node2D" unique_id=444509381]
 script = ExtResource("1_rus8k")
@@ -230,6 +235,12 @@ position = Vector2(1552, 85)
 draggable = true
 interact_with = Array[String](["Fire"])
 texture = ExtResource("50_3x5jj")
+
+[node name="Shoe" parent="." unique_id=240120927 instance=ExtResource("8_15mv3")]
+position = Vector2(1562, 994)
+draggable = true
+texture = ExtResource("51_75ls7")
+sounds = Array[AudioStream]([ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("52_qb2q0"), ExtResource("53_x3eym"), ExtResource("54_ffvxj"), ExtResource("55_yfehg"), ExtResource("16_wbtxt")])
 
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="end_level" from="Player" to="." method="_on_player_end_level"]

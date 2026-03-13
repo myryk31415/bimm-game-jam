@@ -31,6 +31,8 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * SPEED
+		if $cry_sound.playing:
+			$cry_sound.stop()
 		if not walking_sound.playing:
 			walking_sound.play()
 	else:

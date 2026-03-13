@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://djsobu14tpw07" path="res://assets/character/feargameChar_Walk3.png" id="4_fjrip"]
 [ext_resource type="Texture2D" uid="uid://dt5qj868p3s4f" path="res://assets/character/feargameChar_death.png" id="5_3v2ag"]
 [ext_resource type="Texture2D" uid="uid://bbn1xkn5gwfx0" path="res://assets/character/feargameChar_Walk4.png" id="5_smehm"]
+[ext_resource type="AudioStream" uid="uid://dvem2spmfgj53" path="res://Sounds/crying_2.wav" id="14_f1ej7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d2wvv"]
 radius = 51.31
@@ -145,5 +146,9 @@ stream = ExtResource("2_g2els")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1872542530]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_fjrip")
+
+[node name="cry_sound" type="AudioStreamPlayer" parent="." unique_id=302183156]
+stream = ExtResource("14_f1ej7")
+autoplay = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

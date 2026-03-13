@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cqrehyiiritor" path="res://assets/ElinAssets/backgroundmenu.png" id="2_racf3"]
 [ext_resource type="PackedScene" uid="uid://dmx6dhbik3uim" path="res://scenes/cloud_button.tscn" id="2_wqhvx"]
 [ext_resource type="FontFile" uid="uid://xvbyh1xnwmd0" path="res://assets/Fonts/BadComic-Regular.ttf" id="3_7m3ot"]
+[ext_resource type="Texture2D" uid="uid://dr8kiu4tktraj" path="res://assets/ElinAssets/ClownBalloon.png" id="3_v3hpu"]
 
 [node name="GameOver" type="CanvasLayer" unique_id=1098373884]
 script = ExtResource("1_xeevv")
@@ -21,6 +22,12 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_racf3")
+
+[node name="ClownBalloon" type="Sprite2D" parent="ColorRect" unique_id=1648591234]
+self_modulate = Color(1, 1, 1, 0.41960785)
+position = Vector2(1600, 620)
+scale = Vector2(1.719, 1.719)
+texture = ExtResource("3_v3hpu")
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=178211008]
 layout_mode = 1

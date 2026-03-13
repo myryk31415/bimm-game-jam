@@ -37,3 +37,4 @@ sprite_frames = SubResource("SpriteFrames_ascsr")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1302742960]
 stream = ExtResource("6_ya6b3")
+volume_db = -24.0

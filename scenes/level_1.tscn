@@ -215,7 +215,7 @@ draggable = true
 texture = ExtResource("18_tr1x6")
 
 [node name="Bow" parent="." unique_id=791298815 instance=ExtResource("8_15mv3")]
-position = Vector2(320, 65)
+position = Vector2(733, 439)
 draggable = true
 interact_with = Array[String](["Spider", "Fire"])
 texture = ExtResource("12_7gny6")
@@ -266,7 +266,7 @@ interact_with = Array[String](["Fire"])
 texture = ExtResource("50_3x5jj")
 
 [node name="Rainbow" parent="." unique_id=1325822978 instance=ExtResource("8_15mv3")]
-position = Vector2(631, 290)
+position = Vector2(630, 229)
 draggable = true
 collidable = true
 texture = ExtResource("56_x3eym")

@@ -150,3 +150,8 @@ func _on_shoe_interaction(from: Node2D, with: Node2D) -> void:
 func _on_fart_interaction(from: Node2D, with: Node2D) -> void:
 	$Fire/AudioStreamPlayer2.play()
 	$Fire.fade_away()
+
+
+func _on_bubble_clicked(node: Node2D) -> void:
+	print("TRIGGERED")
+	node.fade_away()

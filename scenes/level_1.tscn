@@ -283,5 +283,8 @@ texture = ExtResource("56_x3eym")
 [connection signal="interaction" from="WaterDrop" to="." method="_on_water_drop_interaction"]
 [connection signal="interaction" from="WaterDrop2" to="." method="_on_water_drop_interaction"]
 [connection signal="interaction" from="WaterDrop3" to="." method="_on_water_drop_interaction"]
+[connection signal="clicked" from="Bubble" to="." method="_on_bubble_clicked"]
+[connection signal="clicked" from="Bubble2" to="." method="_on_bubble_clicked"]
+[connection signal="clicked" from="Bubble3" to="." method="_on_bubble_clicked"]
 [connection signal="interaction" from="Balloons" to="." method="_on_balloons_interaction"]
 [connection signal="interaction" from="Star" to="." method="_on_star_interaction"]

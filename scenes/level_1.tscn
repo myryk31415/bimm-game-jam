@@ -165,7 +165,7 @@ position = Vector2(108, 820)
 [node name="IceCream" parent="." unique_id=1547382436 instance=ExtResource("8_15mv3")]
 position = Vector2(1194, 271)
 draggable = true
-interact_with = Array[String](["Clown", "Spider"])
+interact_with = Array[String](["Clown", "Spider", "ClownBalloon", "ClownNoScary", "cute_spiderx"])
 texture = ExtResource("9_e3sih")
 
 [node name="Butterfly" parent="." unique_id=1518474956 instance=ExtResource("8_15mv3")]

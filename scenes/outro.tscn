@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://o0b0dawqcy1m" path="res://assets/feargameChar_Outro/feargameChar_Outro_Frame2.png" id="3_611wi"]
 [ext_resource type="Texture2D" uid="uid://c5a4coeki3gx4" path="res://assets/feargameChar_Outro/feargameChar_Outro_Frame3.png" id="4_0b11s"]
 [ext_resource type="Texture2D" uid="uid://b3tny7kus00k1" path="res://assets/feargameChar_Outro/feargameChar_Outro_Frame4.png" id="5_7nwcv"]
+[ext_resource type="AudioStream" uid="uid://b0t8modnojcl4" path="res://Sounds/alarm.wav" id="6_ya6b3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ascsr"]
 animations = [{
@@ -33,3 +34,6 @@ script = ExtResource("1_ydlee")
 unique_name_in_owner = true
 position = Vector2(966, 546)
 sprite_frames = SubResource("SpriteFrames_ascsr")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1302742960]
+stream = ExtResource("6_ya6b3")

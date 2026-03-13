@@ -1,0 +1,41 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cgseexso2rkij"]
+
+[ext_resource type="Texture2D" uid="uid://ci61urtcjxd8m" path="res://assets/UnicornLickFrames/UnicornLick1.png" id="1_55ugk"]
+[ext_resource type="Texture2D" uid="uid://dbh5lsvrfjufy" path="res://assets/UnicornLickFrames/UnicornLick7.png" id="2_ixj8t"]
+[ext_resource type="Texture2D" uid="uid://cp8kally1mbct" path="res://assets/UnicornLickFrames/UnicornLick2.png" id="3_d2fo1"]
+[ext_resource type="Texture2D" uid="uid://cgcnt3fcr2ony" path="res://assets/UnicornLickFrames/UnicornLick3.png" id="4_fl7t6"]
+[ext_resource type="Texture2D" uid="uid://dtfp0cmf071qn" path="res://assets/UnicornLickFrames/UnicornLick4.png" id="5_rplb2"]
+[ext_resource type="Texture2D" uid="uid://cp2si60aews0f" path="res://assets/UnicornLickFrames/UnicornLick5.png" id="6_i4411"]
+[ext_resource type="Texture2D" uid="uid://cl3ac18a10na" path="res://assets/UnicornLickFrames/UnicornLick6.png" id="7_ujips"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_55ugk")
+}, {
+"duration": 25.0,
+"texture": ExtResource("2_ixj8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d2fo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fl7t6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rplb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i4411")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ujips")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ixj8t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

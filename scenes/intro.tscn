@@ -1,10 +1,11 @@
-[gd_scene format=3 uid="uid://cj8t7hxly41d5"]
+[gd_scene format=3 uid="uid://byr1tsfhurtom"]
 
 [ext_resource type="Script" uid="uid://d1bjwhbcbocgr" path="res://scripts/intro.gd" id="1_wfs7u"]
 [ext_resource type="Texture2D" uid="uid://bdjyugc6qcjmc" path="res://assets/feargameChar_IntroFrames/feargameChar_IntroFrame1.png" id="2_es01l"]
 [ext_resource type="Texture2D" uid="uid://c2oaq62fhxt2r" path="res://assets/feargameChar_IntroFrames/feargameChar_IntroFrame2.png" id="3_0naf5"]
 [ext_resource type="Texture2D" uid="uid://dexngx463fedg" path="res://assets/feargameChar_IntroFrames/feargameChar_IntroFrame3.png" id="4_bu1yb"]
 [ext_resource type="Texture2D" uid="uid://ditsmygc1tj6o" path="res://assets/feargameChar_IntroFrames/feargameChar_IntroFrame4.png" id="5_t1qkj"]
+[ext_resource type="AudioStream" uid="uid://1yuiq1jefyyo" path="res://Sounds/snoring_loop_2.wav" id="6_es01l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_272cy"]
 animations = [{
@@ -45,3 +46,6 @@ script = ExtResource("1_wfs7u")
 unique_name_in_owner = true
 position = Vector2(966, 546)
 sprite_frames = SubResource("SpriteFrames_272cy")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=318603905]
+stream = ExtResource("6_es01l")

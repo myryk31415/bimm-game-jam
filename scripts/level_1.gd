@@ -153,5 +153,12 @@ func _on_fart_interaction(_from: Drag, _with: Drag) -> void:
 
 
 func _on_bubble_clicked(node: Drag) -> void:
-	print("TRIGGERED")
-	node.fade_away()
+	for child in node.get_children():
+		if child.name == "Sprite2D":
+			child.hide()
+	for child in node.get_children():
+		if child.name == "BubblePop":
+			child.show()
+			child.play("default")
+			await child.animation_finished
+			node.queue_free()

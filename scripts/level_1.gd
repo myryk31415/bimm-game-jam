@@ -125,9 +125,19 @@ func _on_balloons_interaction(from: Drag, with: Drag) -> void:
 	with.queue_free()
 
 
+
+
+
 func _on_soap_interaction(from: Drag, with: Drag) -> void:
+	var sound1 = load("uid://caqqdcf4wqjnn")
+	var sound2 = load("uid://1udm75avysmt")
+	var sound3 = load("uid://p33pscj1s1vh")
+	var sound4 = load("uid://bmr15s7axptg1")
+	var sound5 = load("uid://ixnx6ducj327")
+	var sound6 = load("uid://do8r3fb2bj2vy")
+	var sound7 = load("uid://5cl5u22or4ek")
 	$Soap/AudioStreamPlayer.stop()
-	var ClownNoScary = make_item("res://assets/ElinAssets/ClownNoScary.png", false, [], [], false)
+	var ClownNoScary = make_item("res://assets/ElinAssets/ClownNoScary.png", false, [], [sound1, sound2, sound3, sound4, sound5, sound6, sound7], false)
 	ClownNoScary.name = "ClownNoScary"
 	ClownNoScary.global_position = with.global_position
 	add_child(ClownNoScary)

@@ -76,7 +76,7 @@ func make_item(
 	return item
 
 
-func _on_ice_cream_interaction(from: Drag, with: Drag) -> void:
+func _on_ice_cream_interaction(from: Drag, _with: Drag) -> void:
 	$IceCream/AudioStreamPlayer.stop()
 	var IceCreamBite = make_item("res://assets/ElinAssets/IceCreamBite.png",true)
 	IceCreamBite.global_position = from.global_position
@@ -84,7 +84,7 @@ func _on_ice_cream_interaction(from: Drag, with: Drag) -> void:
 	from.queue_free()
 
 
-func _on_butterfly_interaction(from: Drag, with: Drag) -> void:
+func _on_butterfly_interaction(from: Drag, _with: Drag) -> void:
 	$Butterfly/AudioStreamPlayer.stop()
 	var BurnButterfly = make_item("res://assets/ElinAssets/ButterflyBurning.png",true)
 	BurnButterfly.global_position = from.global_position
@@ -106,7 +106,7 @@ func _on_muffin_interaction(from: Drag, with: Drag) -> void:
 		from.queue_free()
 
 
-func _on_star_interaction(from: Drag, with: Drag) -> void:
+func _on_star_interaction(from: Drag, _with: Drag) -> void:
 	$Star/AudioStreamPlayer.stop()
 	var AngryStar = make_item("res://assets/ElinAssets/StarHurt.png",true)
 	AngryStar.global_position = from.global_position
@@ -147,7 +147,7 @@ func _on_shoe_interaction(from: Drag, with: Drag) -> void:
 	with.queue_free()
 
 
-func _on_fart_interaction(from: Drag, with: Drag) -> void:
+func _on_fart_interaction(_from: Drag, _with: Drag) -> void:
 	$Fire/AudioStreamPlayer2.play()
 	$Fire.fade_away()
 

@@ -5,32 +5,45 @@
 [ext_resource type="Texture2D" uid="uid://bbbpj7xe0huv3" path="res://assets/Background.png" id="2_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://r0caupxdyhlg" path="res://scenes/player.tscn" id="2_rus8k"]
 [ext_resource type="AudioStream" uid="uid://cjpsqn7ew8jcj" path="res://Sounds/ambience_cave.wav" id="4_5xbjy"]
+[ext_resource type="Texture2D" uid="uid://dk7gk44ih3nv1" path="res://assets/SpiderAnimated/Spider100.png" id="7_mteb0"]
 [ext_resource type="Texture2D" uid="uid://o2mrp6teojan" path="res://assets/ElinAssets/Spider1.png" id="7_pa8r4"]
 [ext_resource type="AudioStream" uid="uid://p1b287fv8eg0" path="res://Sounds/i'm_a_spider.wav" id="8_2cbcq"]
+[ext_resource type="Texture2D" uid="uid://vi8s145cgv4t" path="res://assets/SpiderAnimated/Spider101.png" id="8_7dh7s"]
 [ext_resource type="PackedScene" uid="uid://dkfhmnuke066g" path="res://scenes/drag.tscn" id="8_15mv3"]
 [ext_resource type="Texture2D" uid="uid://dg6oe5cg3axo4" path="res://assets/ElinAssets/Unicorn.png" id="8_e3sih"]
 [ext_resource type="AudioStream" uid="uid://ccein4bw7seq6" path="res://Sounds/spider_hurt.wav" id="8_tr1x6"]
 [ext_resource type="Texture2D" uid="uid://prftfexjrbyb" path="res://assets/ElinAssets/IceCream.png" id="9_e3sih"]
+[ext_resource type="Texture2D" uid="uid://cwpf4ejut6v2d" path="res://assets/SpiderAnimated/Spider102.png" id="9_ymcg8"]
 [ext_resource type="Texture2D" uid="uid://e50nw4c6g7aa" path="res://assets/ElinAssets/Fire.png" id="10_2y5yt"]
 [ext_resource type="AudioStream" uid="uid://bkc2yyewlepeg" path="res://Sounds/horse_3.wav" id="10_d5akn"]
+[ext_resource type="Texture2D" uid="uid://mgtwmgxd03e2" path="res://assets/SpiderAnimated/Spider103.png" id="10_gdkps"]
+[ext_resource type="Texture2D" uid="uid://bk716yb3djgmv" path="res://assets/SpiderAnimated/Spider104.png" id="11_fgw8e"]
 [ext_resource type="Texture2D" uid="uid://dt4sp1yjqsxrx" path="res://assets/ElinAssets/Butterfly.png" id="11_go7sj"]
 [ext_resource type="Texture2D" uid="uid://1tquwagc1xd5" path="res://assets/ElinAssets/Bow.png" id="12_7gny6"]
+[ext_resource type="Texture2D" uid="uid://ra82kabot5bq" path="res://assets/SpiderAnimated/Spider105.png" id="12_uvb5a"]
 [ext_resource type="Texture2D" uid="uid://u46b1ads7j7s" path="res://assets/ElinAssets/Fart.png" id="13_7gny6"]
+[ext_resource type="Texture2D" uid="uid://dn7wyr0xx4kr3" path="res://assets/SpiderAnimated/Spider106.png" id="13_asvak"]
 [ext_resource type="AudioStream" uid="uid://du1uy3r76tk2h" path="res://Sounds/horse_5.wav" id="13_s7g0b"]
 [ext_resource type="AudioStream" uid="uid://dtyxtysamxt0i" path="res://Sounds/fire_crackling_loop_2_better.wav" id="13_wbtxt"]
+[ext_resource type="Texture2D" uid="uid://clac6bn0e71ed" path="res://assets/SpiderAnimated/Spider107.png" id="14_ac6pt"]
 [ext_resource type="Texture2D" uid="uid://c1sm6bdnderep" path="res://assets/ElinAssets/Muffin.png" id="14_x2xxo"]
 [ext_resource type="AudioStream" uid="uid://kty7hlx7eku6" path="res://Sounds/spider_laugh_1.wav" id="14_y0ove"]
 [ext_resource type="Texture2D" uid="uid://ch5csu2wpxfci" path="res://assets/ElinAssets/Soap.png" id="15_2cbcq"]
+[ext_resource type="Texture2D" uid="uid://bg5g5n1use3bh" path="res://assets/SpiderAnimated/Spider108.png" id="15_5vesh"]
 [ext_resource type="AudioStream" uid="uid://cu2ol6jy8kisb" path="res://Sounds/spider_laugh_2.wav" id="15_awarj"]
 [ext_resource type="Texture2D" uid="uid://ccdg0hsswfstc" path="res://assets/ElinAssets/Sparkle.png" id="16_isj1j"]
 [ext_resource type="AudioStream" uid="uid://dpgw3452y12k8" path="res://Sounds/spider_loop_1.wav" id="16_uuj1x"]
 [ext_resource type="AudioStream" uid="uid://ddeqkptyerkra" path="res://Sounds/uaah_give that back.wav" id="16_wbtxt"]
+[ext_resource type="Texture2D" uid="uid://cfxar7l7s04lq" path="res://assets/SpiderAnimated/Spider109.png" id="16_y1m3s"]
 [ext_resource type="AudioStream" uid="uid://bh0514w3brjd8" path="res://Sounds/spider_loop_2   .wav" id="17_3x5jj"]
+[ext_resource type="Texture2D" uid="uid://2qylofd1doww" path="res://assets/SpiderAnimated/Spider110.png" id="17_5gq73"]
 [ext_resource type="SpriteFrames" uid="uid://cgseexso2rkij" path="res://sprite_frames/unicorn.tres" id="17_lkded"]
 [ext_resource type="Texture2D" uid="uid://ddolwedrcdqvm" path="res://assets/ElinAssets/WaterDrop.png" id="17_so66j"]
 [ext_resource type="AudioStream" uid="uid://cu7vtx64a046r" path="res://Sounds/unicorn_fart.wav" id="17_x2fux"]
 [ext_resource type="AudioStream" uid="uid://dv4d6etj6eaxs" path="res://Sounds/spider_loop_3.wav" id="18_75ls7"]
 [ext_resource type="Texture2D" uid="uid://b1h5rfnbatl46" path="res://assets/ElinAssets/Cloud.png" id="18_tr1x6"]
+[ext_resource type="Texture2D" uid="uid://b4iy4e2p70ir1" path="res://assets/SpiderAnimated/Spider111.png" id="18_uuude"]
+[ext_resource type="Texture2D" uid="uid://dkd1tbt7vwfam" path="res://assets/SpiderAnimated/Spider112.png" id="19_f7q5x"]
 [ext_resource type="AudioStream" uid="uid://dv0lblaup1as4" path="res://Sounds/spider_loop_4.wav" id="19_gwsl1"]
 [ext_resource type="AudioStream" uid="uid://dpgmpd32wsas" path="res://Sounds/cute_spider_mommy_2.wav" id="20_y0ove"]
 [ext_resource type="AudioStream" uid="uid://cuvukxhj5ua0i" path="res://Sounds/horse_combined.wav" id="26_lkded"]
@@ -52,6 +65,53 @@
 [ext_resource type="Texture2D" uid="uid://dvmc1lcu4em18" path="res://assets/ElinAssets/BubblePopFrames/BubblePop3.png" id="55_88rua"]
 [ext_resource type="AudioStream" uid="uid://wj25avn0u8g0" path="res://Sounds/stop_that_uahh.wav" id="55_yfehg"]
 [ext_resource type="Texture2D" uid="uid://v454ochafucc" path="res://assets/ElinAssets/FearGame_Rainbow.png" id="56_x3eym"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d61pb"]
+animations = [{
+"frames": [{
+"duration": 36.0,
+"texture": ExtResource("7_mteb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7dh7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ymcg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gdkps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fgw8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_uvb5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_asvak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ac6pt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5vesh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_y1m3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5gq73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_uuude")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_f7q5x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4ila6"]
 animations = [{
@@ -90,6 +150,7 @@ autoplay = true
 position = Vector2(640, 904)
 collidable = true
 texture = ExtResource("7_pa8r4")
+animation = SubResource("SpriteFrames_d61pb")
 sounds = Array[AudioStream]([ExtResource("8_2cbcq"), ExtResource("8_tr1x6"), ExtResource("14_y0ove"), ExtResource("15_awarj"), ExtResource("16_uuj1x"), ExtResource("17_3x5jj"), ExtResource("18_75ls7"), ExtResource("19_gwsl1")])
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Spider" unique_id=310599104]

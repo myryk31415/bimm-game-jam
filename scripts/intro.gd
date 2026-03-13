@@ -4,6 +4,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	%AnimatedSprite2D.play("default")
+	$AudioStreamPlayer.play()
 	await %AnimatedSprite2D.animation_finished
 	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
 

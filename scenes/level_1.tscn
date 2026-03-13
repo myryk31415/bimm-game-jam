@@ -10,18 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://dkfhmnuke066g" path="res://scenes/drag.tscn" id="8_15mv3"]
 [ext_resource type="Texture2D" uid="uid://dg6oe5cg3axo4" path="res://assets/ElinAssets/Unicorn.png" id="8_e3sih"]
 [ext_resource type="AudioStream" uid="uid://ccein4bw7seq6" path="res://Sounds/spider_hurt.wav" id="8_tr1x6"]
-[ext_resource type="AudioStream" uid="uid://wtktt17ko5lg" path="res://Sounds/snoring_or_spider_breathing_loop.wav" id="9_bamb7"]
-[ext_resource type="AudioStream" uid="uid://bjpdn7ln7ener" path="res://Sounds/horse_1.wav" id="9_d5akn"]
 [ext_resource type="Texture2D" uid="uid://prftfexjrbyb" path="res://assets/ElinAssets/IceCream.png" id="9_e3sih"]
 [ext_resource type="Texture2D" uid="uid://e50nw4c6g7aa" path="res://assets/ElinAssets/Fire.png" id="10_2y5yt"]
-[ext_resource type="AudioStream" uid="uid://cg6ccgh0fd2gf" path="res://Sounds/snoring_or_spider_hissing_aggressive_loop.wav" id="10_8jqp6"]
 [ext_resource type="AudioStream" uid="uid://bkc2yyewlepeg" path="res://Sounds/horse_3.wav" id="10_d5akn"]
-[ext_resource type="AudioStream" uid="uid://dhln48rbk8c84" path="res://Sounds/horse_2.wav" id="10_wbtxt"]
 [ext_resource type="Texture2D" uid="uid://dt4sp1yjqsxrx" path="res://assets/ElinAssets/Butterfly.png" id="11_go7sj"]
-[ext_resource type="AudioStream" uid="uid://2ut2lxxpl1xg" path="res://Sounds/spider_hiss2.mp3" id="11_jscgt"]
-[ext_resource type="AudioStream" uid="uid://b6kxyjcnle1go" path="res://Sounds/spider_hiss.mp3" id="12_0bysi"]
 [ext_resource type="Texture2D" uid="uid://1tquwagc1xd5" path="res://assets/ElinAssets/Bow.png" id="12_7gny6"]
-[ext_resource type="AudioStream" uid="uid://bbweq7aljui51" path="res://Sounds/horse_4.wav" id="12_x2fux"]
 [ext_resource type="Texture2D" uid="uid://u46b1ads7j7s" path="res://assets/ElinAssets/Fart.png" id="13_7gny6"]
 [ext_resource type="AudioStream" uid="uid://du1uy3r76tk2h" path="res://Sounds/horse_5.wav" id="13_s7g0b"]
 [ext_resource type="AudioStream" uid="uid://dtyxtysamxt0i" path="res://Sounds/fire_crackling_loop_2_better.wav" id="13_wbtxt"]
@@ -41,15 +34,14 @@
 [ext_resource type="AudioStream" uid="uid://dpgmpd32wsas" path="res://Sounds/cute_spider_mommy_2.wav" id="20_y0ove"]
 [ext_resource type="AudioStream" uid="uid://cuvukxhj5ua0i" path="res://Sounds/horse_combined.wav" id="26_lkded"]
 [ext_resource type="Texture2D" uid="uid://ci61urtcjxd8m" path="res://assets/UnicornLickFrames/UnicornLick1.png" id="27_lvvyj"]
-[ext_resource type="AudioStream" uid="uid://dhnlt6wtaiwkw" path="res://Sounds/GIVE THAT BACK.wav" id="28_ensge"]
 [ext_resource type="Texture2D" uid="uid://cp8kally1mbct" path="res://assets/UnicornLickFrames/UnicornLick2.png" id="28_iwav6"]
+[ext_resource type="AudioStream" uid="uid://dwpqlyvalf143" path="res://Sounds/clown_laugh.wav" id="28_qb2q0"]
 [ext_resource type="Texture2D" uid="uid://cgcnt3fcr2ony" path="res://assets/UnicornLickFrames/UnicornLick3.png" id="29_n50md"]
 [ext_resource type="AudioStream" uid="uid://c7au6q0dr3n0x" path="res://Sounds/less of that.wav" id="29_qb2q0"]
 [ext_resource type="Texture2D" uid="uid://dtfp0cmf071qn" path="res://assets/UnicornLickFrames/UnicornLick4.png" id="30_mteb0"]
 [ext_resource type="AudioStream" uid="uid://byajdjerwqmll" path="res://Sounds/mine!.wav" id="30_x3eym"]
 [ext_resource type="Texture2D" uid="uid://cp2si60aews0f" path="res://assets/UnicornLickFrames/UnicornLick5.png" id="31_7dh7s"]
 [ext_resource type="Texture2D" uid="uid://cl3ac18a10na" path="res://assets/UnicornLickFrames/UnicornLick6.png" id="32_ymcg8"]
-[ext_resource type="AudioStream" uid="uid://dagkxja25b70v" path="res://Sounds/fire_crackling_loop.wav" id="33_ffvxj"]
 [ext_resource type="Texture2D" uid="uid://dbh5lsvrfjufy" path="res://assets/UnicornLickFrames/UnicornLick7.png" id="33_gdkps"]
 [ext_resource type="Texture2D" uid="uid://ct2pvf4bgwyns" path="res://assets/fire-particle.png" id="35_8jqp6"]
 [ext_resource type="AudioStream" uid="uid://dnxqjfc606dys" path="res://Sounds/extinguish_fire.wav" id="36_0bysi"]
@@ -116,7 +108,7 @@ autoplay = true
 position = Vector2(640, 904)
 collidable = true
 texture = ExtResource("7_pa8r4")
-sounds = Array[AudioStream]([ExtResource("8_2cbcq"), ExtResource("9_bamb7"), ExtResource("10_8jqp6"), ExtResource("11_jscgt"), ExtResource("12_0bysi"), ExtResource("8_tr1x6"), ExtResource("14_y0ove"), ExtResource("15_awarj"), ExtResource("16_uuj1x"), ExtResource("17_3x5jj"), ExtResource("18_75ls7"), ExtResource("19_gwsl1")])
+sounds = Array[AudioStream]([ExtResource("8_2cbcq"), ExtResource("8_tr1x6"), ExtResource("14_y0ove"), ExtResource("15_awarj"), ExtResource("16_uuj1x"), ExtResource("17_3x5jj"), ExtResource("18_75ls7"), ExtResource("19_gwsl1")])
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Spider" unique_id=310599104]
 stream = ExtResource("20_y0ove")
@@ -124,7 +116,7 @@ stream = ExtResource("20_y0ove")
 [node name="Unicorn" parent="." unique_id=1586559094 instance=ExtResource("8_15mv3")]
 position = Vector2(1444, 299)
 texture = ExtResource("8_e3sih")
-sounds = Array[AudioStream]([ExtResource("9_d5akn"), ExtResource("10_wbtxt"), ExtResource("10_d5akn"), ExtResource("12_x2fux"), ExtResource("13_s7g0b"), ExtResource("26_lkded")])
+sounds = Array[AudioStream]([ExtResource("10_d5akn"), ExtResource("13_s7g0b"), ExtResource("26_lkded")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Unicorn" unique_id=524812239]
 sprite_frames = SubResource("SpriteFrames_fgw8e")
@@ -135,12 +127,13 @@ frame_progress = 0.8444337
 position = Vector2(1638, 813)
 collidable = true
 texture = ExtResource("45_jscgt")
+sounds = Array[AudioStream]([ExtResource("28_qb2q0")])
 
 [node name="Fire" parent="." unique_id=2146614021 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
 position = Vector2(1058, 874)
 collidable = true
 texture = ExtResource("10_2y5yt")
-sounds = Array[AudioStream]([ExtResource("33_ffvxj"), ExtResource("13_wbtxt")])
+sounds = Array[AudioStream]([ExtResource("13_wbtxt")])
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Fire" unique_id=2008203852]
 position = Vector2(0, 48)
@@ -174,7 +167,6 @@ position = Vector2(1194, 271)
 draggable = true
 interact_with = Array[String](["Clown", "Spider"])
 texture = ExtResource("9_e3sih")
-sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="Butterfly" parent="." unique_id=1518474956 instance=ExtResource("8_15mv3")]
 position = Vector2(1757, 114)
@@ -195,14 +187,12 @@ position = Vector2(1088, 433)
 draggable = true
 interact_with = Array[String](["Fire", "Clown", "Spider", "ClownNoScary", "ClownBalloon", "cute_spider"])
 texture = ExtResource("14_x2xxo")
-sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="Soap" parent="." unique_id=943966003 instance=ExtResource("8_15mv3")]
 position = Vector2(94, 442)
 draggable = true
 interact_with = Array[String](["Clown", "ClownBalloon"])
 texture = ExtResource("15_2cbcq")
-sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="Sparkle" parent="." unique_id=2137941298 instance=ExtResource("8_15mv3")]
 position = Vector2(1185.0001, 28.999998)
@@ -223,35 +213,30 @@ texture = ExtResource("16_isj1j")
 position = Vector2(323, 115)
 draggable = true
 texture = ExtResource("18_tr1x6")
-sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="Bow" parent="." unique_id=791298815 instance=ExtResource("8_15mv3")]
 position = Vector2(320, 65)
 draggable = true
 interact_with = Array[String](["Spider", "Fire"])
 texture = ExtResource("12_7gny6")
-sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="WaterDrop" parent="." unique_id=1570758714 instance=ExtResource("8_15mv3")]
 position = Vector2(368, 223)
 draggable = true
 interact_with = Array[String](["Fire"])
 texture = ExtResource("17_so66j")
-sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="WaterDrop2" parent="." unique_id=1836798639 instance=ExtResource("8_15mv3")]
 position = Vector2(358, 358)
 draggable = true
 interact_with = Array[String](["Fire"])
 texture = ExtResource("17_so66j")
-sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="WaterDrop3" parent="." unique_id=1322457601 instance=ExtResource("8_15mv3")]
 position = Vector2(283, 277)
 draggable = true
 interact_with = Array[String](["Fire"])
 texture = ExtResource("17_so66j")
-sounds = Array[AudioStream]([ExtResource("28_ensge"), ExtResource("29_qb2q0"), ExtResource("30_x3eym"), ExtResource("16_wbtxt")])
 
 [node name="Bubble" parent="." unique_id=287188484 instance=ExtResource("8_15mv3")]
 position = Vector2(141, 380)

@@ -1,7 +1,9 @@
 extends StaticBody2D
 
-signal interaction(from: Node2D, with: Node2D)
-signal clicked(node: Node2D)
+class_name Drag
+
+signal interaction(from: Drag, with: Drag)
+signal clicked(node: Drag)
 
 @export var draggable: bool:
 	set(value):

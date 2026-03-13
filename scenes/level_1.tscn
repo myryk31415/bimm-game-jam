@@ -52,7 +52,10 @@
 [ext_resource type="Texture2D" uid="uid://cbbr4sbgjyamu" path="res://assets/ElinAssets/ClownShoe.png" id="51_75ls7"]
 [ext_resource type="AudioStream" uid="uid://c1g5tnyxougar" path="res://Sounds/oh no .wav" id="52_qb2q0"]
 [ext_resource type="AudioStream" uid="uid://c0v48x1g81qpf" path="res://Sounds/Oh no, no um.wav" id="53_x3eym"]
+[ext_resource type="Texture2D" uid="uid://by7by8qdhnt6a" path="res://assets/ElinAssets/BubblePopFrames/BubblePop1.png" id="53_yfehg"]
+[ext_resource type="Texture2D" uid="uid://bqydn6h2n8nqo" path="res://assets/ElinAssets/BubblePopFrames/BubblePop2.png" id="54_48b18"]
 [ext_resource type="AudioStream" uid="uid://bhjcl8phx3el2" path="res://Sounds/please don't.wav" id="54_ffvxj"]
+[ext_resource type="Texture2D" uid="uid://dvmc1lcu4em18" path="res://assets/ElinAssets/BubblePopFrames/BubblePop3.png" id="55_88rua"]
 [ext_resource type="AudioStream" uid="uid://wj25avn0u8g0" path="res://Sounds/stop_that_uahh.wav" id="55_yfehg"]
 [ext_resource type="Texture2D" uid="uid://v454ochafucc" path="res://assets/ElinAssets/FearGame_Rainbow.png" id="56_x3eym"]
 
@@ -86,6 +89,23 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ila6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_yfehg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_48b18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_88rua")
+}],
+"loop": false,
+"name": &"default",
+"speed": 6.0
 }]
 
 [node name="Level1" type="Node2D" unique_id=444509381]
@@ -243,15 +263,27 @@ position = Vector2(141, 380)
 draggable = true
 texture = ExtResource("48_awarj")
 
+[node name="BubblePop" type="AnimatedSprite2D" parent="Bubble" unique_id=1948390719]
+visible = false
+sprite_frames = SubResource("SpriteFrames_4ila6")
+
 [node name="Bubble2" parent="." unique_id=644117173 instance=ExtResource("8_15mv3")]
 position = Vector2(131, 283)
 draggable = true
 texture = ExtResource("48_awarj")
 
+[node name="BubblePop" type="AnimatedSprite2D" parent="Bubble2" unique_id=248709432]
+visible = false
+sprite_frames = SubResource("SpriteFrames_4ila6")
+
 [node name="Bubble3" parent="." unique_id=596831095 instance=ExtResource("8_15mv3")]
 position = Vector2(55, 328)
 draggable = true
 texture = ExtResource("48_awarj")
+
+[node name="BubblePop" type="AnimatedSprite2D" parent="Bubble3" unique_id=1214561112]
+visible = false
+sprite_frames = SubResource("SpriteFrames_4ila6")
 
 [node name="Balloons" parent="." unique_id=900304778 instance=ExtResource("8_15mv3")]
 position = Vector2(916, 218)

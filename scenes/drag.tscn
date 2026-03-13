@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://2icwkw0t1g4h" path="res://scripts/drag.gd" id="1_e7yra"]
 [ext_resource type="Texture2D" uid="uid://biw0kklajn81k" path="res://icon.svg" id="2_g5hq8"]
-[ext_resource type="Script" path="res://scripts/idle_animation.gd" id="3_q8ftw"]
+[ext_resource type="Script" uid="uid://cr2o2qeroidgj" path="res://scripts/idle_animation.gd" id="3_q8ftw"]
 
 [sub_resource type="Animation" id="Animation_q8ftw"]
 length = 0.001

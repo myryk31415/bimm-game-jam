@@ -69,6 +69,10 @@ func fade_away():
 	queue_free()
 
 
+func hide_sprite():
+	%Sprite2D.hide()
+
+
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		match event.button_index:

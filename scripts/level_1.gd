@@ -93,16 +93,16 @@ func _on_butterfly_interaction(from: Node2D, with: Node2D) -> void:
 
 
 func _on_muffin_interaction(from: Node2D, with: Node2D) -> void:
-	$Muffin/AudioStreamPlayer.stop()
 	if with.name == "Fire":
+		$Muffin/AudioStreamPlayer.stop()
 		var BurntMuffin = make_item("res://assets/ElinAssets/MuffinBurned.png",true)
 		BurntMuffin.global_position = from.global_position
 		add_child(BurntMuffin)
 		from.queue_free()
-	if with.name == "Spider" or with.name == "Clown":
-		var MuffinBite = make_item("res://assets/ElinAssets/MuffinBite.png",true)
-		MuffinBite.global_position = from.global_position
-		add_child(MuffinBite)
+	else:
+		var BittenMuffin = make_item("res://assets/ElinAssets/MuffinBite.png",true)
+		BittenMuffin.global_position = from.global_position
+		add_child(BittenMuffin)
 		from.queue_free()
 
 
@@ -128,6 +128,7 @@ func _on_balloons_interaction(from: Node2D, with: Node2D) -> void:
 func _on_soap_interaction(from: Node2D, with: Node2D) -> void:
 	$Soap/AudioStreamPlayer.stop()
 	var ClownNoScary = make_item("res://assets/ElinAssets/ClownNoScary.png", false, [], [], false)
+	ClownNoScary.name = "ClownNoScary"
 	ClownNoScary.global_position = with.global_position
 	add_child(ClownNoScary)
 	move_child(ClownNoScary, 1)

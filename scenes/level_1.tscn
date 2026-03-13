@@ -162,12 +162,6 @@ sounds = Array[AudioStream]([ExtResource("8_2cbcq"), ExtResource("8_tr1x6"), Ext
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Spider" unique_id=310599104]
 stream = ExtResource("20_y0ove")
 
-[node name="Unicorn" parent="." unique_id=1586559094 instance=ExtResource("8_15mv3")]
-position = Vector2(1444, 299)
-texture = ExtResource("8_e3sih")
-animation = ExtResource("17_lkded")
-sounds = Array[AudioStream]([ExtResource("10_d5akn"), ExtResource("13_s7g0b"), ExtResource("26_lkded")])
-
 [node name="Clown" parent="." unique_id=757569316 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
 position = Vector2(1547, 805)
 collidable = true
@@ -197,6 +191,18 @@ scale_amount_max = 0.02
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Fire" unique_id=15046184]
 stream = ExtResource("36_0bysi")
 
+[node name="IceCream" parent="." unique_id=1547382436 instance=ExtResource("8_15mv3")]
+position = Vector2(1194, 271)
+draggable = true
+interact_with = Array[String](["Clown", "Spider", "ClownBalloon", "ClownNoScary", "cute_spiderx"])
+texture = ExtResource("9_e3sih")
+
+[node name="Unicorn" parent="." unique_id=1586559094 instance=ExtResource("8_15mv3")]
+position = Vector2(1444, 299)
+texture = ExtResource("8_e3sih")
+animation = ExtResource("17_lkded")
+sounds = Array[AudioStream]([ExtResource("10_d5akn"), ExtResource("13_s7g0b"), ExtResource("26_lkded")])
+
 [node name="Shoe" parent="." unique_id=240120927 instance=ExtResource("8_15mv3")]
 position = Vector2(1471, 986)
 draggable = true
@@ -206,12 +212,6 @@ sounds = Array[AudioStream]([ExtResource("29_qb2q0"), ExtResource("30_x3eym"), E
 
 [node name="Player" parent="." unique_id=1278691344 instance=ExtResource("2_rus8k")]
 position = Vector2(108, 820)
-
-[node name="IceCream" parent="." unique_id=1547382436 instance=ExtResource("8_15mv3")]
-position = Vector2(1194, 271)
-draggable = true
-interact_with = Array[String](["Clown", "Spider", "ClownBalloon", "ClownNoScary", "cute_spiderx"])
-texture = ExtResource("9_e3sih")
 
 [node name="Butterfly" parent="." unique_id=1518474956 instance=ExtResource("8_15mv3")]
 position = Vector2(1757, 114)
@@ -331,10 +331,10 @@ draggable = true
 collidable = true
 texture = ExtResource("56_x3eym")
 
+[connection signal="interaction" from="IceCream" to="." method="_on_ice_cream_interaction"]
 [connection signal="interaction" from="Shoe" to="." method="_on_shoe_interaction"]
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="end_level" from="Player" to="." method="_on_player_end_level"]
-[connection signal="interaction" from="IceCream" to="." method="_on_ice_cream_interaction"]
 [connection signal="interaction" from="Butterfly" to="." method="_on_butterfly_interaction"]
 [connection signal="interaction" from="Fart" to="." method="_on_fart_interaction"]
 [connection signal="interaction" from="Muffin" to="." method="_on_muffin_interaction"]

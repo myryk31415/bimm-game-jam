@@ -81,13 +81,14 @@ layout_mode = 2
 color = Color(1, 0.32941177, 0.2627451, 0)
 
 [node name="IceCream" type="Sprite2D" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=806080328]
-position = Vector2(1494, 537.00006)
+position = Vector2(1355.9999, 532)
+rotation = -0.25433093
 scale = Vector2(1.8820776, 1.8820779)
 texture = ExtResource("6_oa1go")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=1592886000]
 unique_name_in_owner = true
-position = Vector2(1968, 598)
+position = Vector2(1840.875, 595.375)
 scale = Vector2(1.9924592, 1.9924594)
 sprite_frames = ExtResource("5_rtw2f")
 

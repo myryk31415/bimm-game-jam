@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bbbpj7xe0huv3" path="res://assets/Background.png" id="2_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://r0caupxdyhlg" path="res://scenes/player.tscn" id="2_rus8k"]
 [ext_resource type="AudioStream" uid="uid://cjpsqn7ew8jcj" path="res://Sounds/ambience_cave.wav" id="4_5xbjy"]
+[ext_resource type="Texture2D" uid="uid://delvsibc01ebm" path="res://assets/ElinAssets/WakeUpSign.png" id="5_x3eym"]
 [ext_resource type="Texture2D" uid="uid://o2mrp6teojan" path="res://assets/ElinAssets/Spider1.png" id="7_pa8r4"]
 [ext_resource type="AudioStream" uid="uid://p1b287fv8eg0" path="res://Sounds/i'm_a_spider.wav" id="8_2cbcq"]
 [ext_resource type="PackedScene" uid="uid://dkfhmnuke066g" path="res://scenes/drag.tscn" id="8_15mv3"]
@@ -104,6 +105,10 @@ end = 1920
 stream = ExtResource("4_5xbjy")
 autoplay = true
 
+[node name="WakeupSign" type="Sprite2D" parent="." unique_id=514231313]
+position = Vector2(1769, 694)
+texture = ExtResource("5_x3eym")
+
 [node name="Spider" parent="." unique_id=996746160 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
 position = Vector2(640, 904)
 collidable = true
@@ -124,7 +129,7 @@ autoplay = "default"
 frame_progress = 0.8444337
 
 [node name="Clown" parent="." unique_id=757569316 groups=["KillPlayer"] instance=ExtResource("8_15mv3")]
-position = Vector2(1638, 813)
+position = Vector2(1547, 805)
 collidable = true
 texture = ExtResource("45_jscgt")
 sounds = Array[AudioStream]([ExtResource("28_qb2q0")])
@@ -153,7 +158,7 @@ scale_amount_max = 0.02
 stream = ExtResource("36_0bysi")
 
 [node name="Shoe" parent="." unique_id=240120927 instance=ExtResource("8_15mv3")]
-position = Vector2(1562, 994)
+position = Vector2(1471, 986)
 draggable = true
 interact_with = Array[String](["cute_spider"])
 texture = ExtResource("51_75ls7")

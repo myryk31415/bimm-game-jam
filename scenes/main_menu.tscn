@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://bg5tsici80b54"]
 
 [ext_resource type="Script" uid="uid://d1c1x410mju2t" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://cqrehyiiritor" path="res://assets/ElinAssets/backgroundmenu.png" id="2_bqqt6"]
 [ext_resource type="PackedScene" uid="uid://dmx6dhbik3uim" path="res://scenes/cloud_button.tscn" id="2_ekxnf"]
+[ext_resource type="FontFile" uid="uid://xvbyh1xnwmd0" path="res://assets/Fonts/BadComic-Regular.ttf" id="3_wu84c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wu84c"]
+font = ExtResource("3_wu84c")
+font_size = 49
+font_color = Color(0.105882354, 0.105882354, 0.105882354, 1)
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1098373884]
 script = ExtResource("1_l6cm7")
@@ -13,6 +20,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.14585283, 0.21366757, 0.5287111, 0.8980392)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=35612460]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_bqqt6")
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=178211008]
 layout_mode = 1
@@ -28,13 +41,12 @@ theme_override_constants/margin_bottom = 100
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer" unique_id=1945211112]
 layout_mode = 2
-theme_override_constants/separation = 102
+theme_override_constants/separation = 4
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=1858553712]
 layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 40
+theme_override_constants/separation = -20
 alignment = 1
 
 [node name="VBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1956222386]
@@ -44,7 +56,9 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 75
-text = "A hellvenly Match"
+text = "The Drag: Giga Croissant
+match made in Heaven (and hell) the lemonade game"
+label_settings = SubResource("LabelSettings_wu84c")
 horizontal_alignment = 1
 
 [node name="Start" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1454882384 instance=ExtResource("2_ekxnf")]

@@ -80,16 +80,16 @@ custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 color = Color(1, 0.32941177, 0.2627451, 0)
 
+[node name="IceCream" type="Sprite2D" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=806080328]
+position = Vector2(1494, 537.00006)
+scale = Vector2(1.8820776, 1.8820779)
+texture = ExtResource("6_oa1go")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=1592886000]
 unique_name_in_owner = true
 position = Vector2(1968, 598)
 scale = Vector2(1.9924592, 1.9924594)
 sprite_frames = ExtResource("5_rtw2f")
-
-[node name="IceCream" type="Sprite2D" parent="." unique_id=806080328]
-position = Vector2(1591, 672.00006)
-scale = Vector2(1.8820776, 1.8820779)
-texture = ExtResource("6_oa1go")
 
 [connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/How to play" to="." method="_on_how_to_play_pressed"]

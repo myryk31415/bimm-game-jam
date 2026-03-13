@@ -66,6 +66,7 @@
 [ext_resource type="Texture2D" uid="uid://dvmc1lcu4em18" path="res://assets/ElinAssets/BubblePopFrames/BubblePop3.png" id="55_88rua"]
 [ext_resource type="AudioStream" uid="uid://wj25avn0u8g0" path="res://Sounds/stop_that_uahh.wav" id="55_yfehg"]
 [ext_resource type="Texture2D" uid="uid://v454ochafucc" path="res://assets/ElinAssets/FearGame_Rainbow.png" id="56_x3eym"]
+[ext_resource type="AudioStream" uid="uid://dujsle2gipmv0" path="res://Sounds/bubble_pop.wav" id="61_ymcg8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d61pb"]
 animations = [{
@@ -286,6 +287,7 @@ texture = ExtResource("17_so66j")
 position = Vector2(141, 380)
 draggable = true
 texture = ExtResource("48_awarj")
+sounds = Array[AudioStream]([ExtResource("61_ymcg8")])
 
 [node name="BubblePop" type="AnimatedSprite2D" parent="Bubble" unique_id=1948390719]
 visible = false
@@ -295,6 +297,7 @@ sprite_frames = SubResource("SpriteFrames_4ila6")
 position = Vector2(131, 283)
 draggable = true
 texture = ExtResource("48_awarj")
+sounds = Array[AudioStream]([ExtResource("61_ymcg8")])
 
 [node name="BubblePop" type="AnimatedSprite2D" parent="Bubble2" unique_id=248709432]
 visible = false
@@ -304,6 +307,7 @@ sprite_frames = SubResource("SpriteFrames_4ila6")
 position = Vector2(55, 328)
 draggable = true
 texture = ExtResource("48_awarj")
+sounds = Array[AudioStream]([ExtResource("61_ymcg8")])
 
 [node name="BubblePop" type="AnimatedSprite2D" parent="Bubble3" unique_id=1214561112]
 visible = false

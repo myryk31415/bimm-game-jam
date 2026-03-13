@@ -46,6 +46,9 @@ signal clicked(node: Drag)
 			add_child(collision_polygon)
 			%Area2D.add_child(collision_polygon.duplicate())
 
+@export var animation: SpriteFrames:
+	set(value):
+		%AnimatedSprite2D.sprite_frames = value
 
 @export var sounds: Array[AudioStream]= []
 
@@ -54,8 +57,9 @@ var is_grabbed: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	if %AnimatedSprite2D.sprite_frames:
+		%Sprite2D.hide()
+		%AnimatedSprite2D.play("default")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

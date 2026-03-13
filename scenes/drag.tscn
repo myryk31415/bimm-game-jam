@@ -52,6 +52,9 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 texture = ExtResource("2_g5hq8")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=69060782]
+unique_name_in_owner = true
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1513063433]
 unique_name_in_owner = true
 

@@ -136,8 +136,8 @@ shape = SubResource("CapsuleShape2D_d2wvv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=550679368]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_ur7pv")
-animation = &"idle"
-autoplay = "idle"
+animation = &"crying"
+autoplay = "crying"
 
 [node name="walking_sound" type="AudioStreamPlayer" parent="." unique_id=716373013]
 stream = ExtResource("2_g2els")

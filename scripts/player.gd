@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 	elif velocity.x < 0:
 		%AnimatedSprite2D.play("walk")
 		%AnimatedSprite2D.flip_h = true
-	else:
+	elif %AnimatedSprite2D.animation != "crying":
 		%AnimatedSprite2D.play("idle")
 	move_and_slide()
 	

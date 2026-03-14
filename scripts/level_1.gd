@@ -172,3 +172,7 @@ func _on_bubble_clicked(node: Drag) -> void:
 			child.play("default")
 			await child.animation_finished
 			node.queue_free()
+
+
+func _on_player_rotate_screen() -> void:
+	%AnimationPlayer.play("rotate_screen")

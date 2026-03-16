@@ -117,6 +117,7 @@ func _on_star_interaction(from: Drag, _with: Drag) -> void:
 func _on_balloons_interaction(from: Drag, with: Drag) -> void:
 	$Balloons/AudioStreamPlayer.stop()
 	var ClownBalloon = make_item("res://assets/ElinAssets/ClownBalloon.png")
+	ClownBalloon.add_to_group("KillPlayer")
 	ClownBalloon.name = "ClownBalloon"
 	ClownBalloon.global_position = with.global_position
 	add_child(ClownBalloon)

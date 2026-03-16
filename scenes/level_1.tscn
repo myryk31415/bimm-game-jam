@@ -68,27 +68,6 @@
 [ext_resource type="Texture2D" uid="uid://v454ochafucc" path="res://assets/ElinAssets/FearGame_Rainbow.png" id="56_x3eym"]
 [ext_resource type="AudioStream" uid="uid://dujsle2gipmv0" path="res://Sounds/bubble_pop.wav" id="61_ymcg8"]
 
-[sub_resource type="Animation" id="Animation_gdkps"]
-resource_name = "rotate_screen"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 6.283185307179586]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fgw8e"]
-_data = {
-&"rotate_screen": SubResource("Animation_gdkps")
-}
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_d61pb"]
 animations = [{
 "frames": [{
@@ -153,12 +132,29 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="Animation" id="Animation_gdkps"]
+resource_name = "rotate_screen"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.283185307179586]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fgw8e"]
+_data = {
+&"rotate_screen": SubResource("Animation_gdkps")
+}
+
 [node name="Level1" type="Node2D" unique_id=444509381]
 script = ExtResource("1_rus8k")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=457390121]
-unique_name_in_owner = true
-libraries/ = SubResource("AnimationLibrary_fgw8e")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1179163203]
 position = Vector2(959.2, 539)
@@ -359,6 +355,10 @@ texture = ExtResource("56_x3eym")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=196101171]
 offset = Vector2(960, 540)
 ignore_rotation = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=457390121]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_fgw8e")
 
 [connection signal="interaction" from="IceCream" to="." method="_on_ice_cream_interaction"]
 [connection signal="interaction" from="Shoe" to="." method="_on_shoe_interaction"]

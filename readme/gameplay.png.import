@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6n1v78m4rng2"
-path="res://.godot/imported/The Drag: Giga Croissant - match made in Heaven (and hell) the lemonade game.png-bc9c8b8a1eb191ba7ae00057a40a03a0.ctex"
+uid="uid://nur67cojbft"
+path="res://.godot/imported/gameplay.png-d304eed831eaf907f5fe8b565c19a11c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://readme/The Drag: Giga Croissant - match made in Heaven (and hell) the lemonade game.png"
-dest_files=["res://.godot/imported/The Drag: Giga Croissant - match made in Heaven (and hell) the lemonade game.png-bc9c8b8a1eb191ba7ae00057a40a03a0.ctex"]
+source_file="res://readme/gameplay.png"
+dest_files=["res://.godot/imported/gameplay.png-d304eed831eaf907f5fe8b565c19a11c.ctex"]
 
 [params]
 
